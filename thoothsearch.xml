@@ -1,0 +1,7 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<ShortName>Thooth</ShortName>
+<Description>Thooth search results</Description>
+<InputEncoding>UTF-8</InputEncoding>
+<Url type="text/html" method="GET" template="http://thooth.com/searchbar.html#{searchTerms}"></Url>
+<moz:SearchForm>http://thooth.com/</moz:SearchForm>
+</OpenSearchDescription>

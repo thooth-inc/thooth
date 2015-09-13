@@ -1,0 +1,96 @@
+#help-container {
+	width:60%;
+	font-size:13px;
+}
+
+#bug-report-form {
+	width:60%;
+}
+
+#bug-report-form textarea {
+	width:95%;
+	display:block;
+	margin:10px 0;
+	height:100px;
+}
+
+#bug-report-form input {
+	width:95%;
+	margin:10px 0;
+}
+
+#bug-report-msg {
+	color:red !important;
+	font-weight:bold;
+}
+
+.bug-title {
+	font-size:14px;
+	font-weight:bold;
+}
+
+#bug-report-form input.bug-submit {
+	width:auto;
+}
+
+.help-message {
+	color:#888;
+	margin:0 0 15px 0;
+}
+
+body.toolbar {
+	text-align:left;
+}
+
+/**Toolbar**/
+
+.toolbar {
+	font-size:14px;
+}
+
+#toolbar-container {
+	margin:15px 10px 0 10px;
+}
+
+#toolbar-banner {
+	background-color:#6febff;
+	height:200px;
+	position:relative;
+}
+
+#toolbar-footer {
+	padding:0px 0 10px 0;
+}
+
+#toolbar-logo {
+	position:absolute;
+	top:0px;
+	left:5px;
+}
+
+#toolbar-button {
+	position:absolute;
+	top:80px;
+	right:0px;
+}
+
+#toolbar-download-text {
+	position:absolute;
+	top:121px; 
+	left:170px; 
+	font-family:courier;
+	font-size:24px;
+}
+
+#toolbar-help-text {
+	position:absolute;
+	top:135px; 
+	right:0px; 
+	font-family:courier;
+	font-size:24px;
+}
+
+#toolbar-download-text a {
+	text-decoration:none;
+	color:black;
+}

@@ -1,0 +1,40 @@
+#keywords-container {
+	margin-bottom:5px;
+}
+
+#url h1 a{
+	font-weight:800;
+	font-size:26px;
+	color:#666666;
+}
+
+.keyword a{
+	font-weight:800;
+	font-size:12px;
+}
+.keyword-more a{
+	font-size:10px;
+}
+
+.user a{
+	font-size:12px;
+}
+.user-more a{
+	font-size:10px;
+}
+
+
+.section-title h2{
+	font-weight:800;
+	font-size:14px;
+	margin-bottom:7px;
+}
+
+#url-info{
+	margin-bottom:25px;
+	font-size:12px;
+	background-color:#FFFCA9;
+	width:400px;
+	padding:3px;
+	vertical-align:middle;
+}

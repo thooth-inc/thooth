@@ -1,0 +1,41 @@
+.wise-message {
+	color:#777;
+	margin:0 0 15px 0;
+}
+
+.wise-note {
+	color:red;
+	font-size:11px;
+	margin:5px 0 0 0;
+}
+
+#query, #appcode, #appdef {
+	width:90%;
+}
+
+#wise-container {
+	width:70%;
+	background-color:#EFF3F0;
+	border:1px solid #D4DFD7;
+	padding:0px 10px 10px 10px;
+	margin:0 0 50px 0;
+}
+
+#wise-container h2 {
+	margin-top:10px;
+}
+
+.wise-instruction {
+	margin:0 0 10px 0;
+	font-size:13px;
+}
+
+#appoutput {
+	background-color:#fff;
+	min-height:150px;
+	width:90%;
+}
+
+#test-application {
+	margin:10px 0 0 0;
+}

@@ -1,0 +1,16 @@
+<script type="text/javascript">
+if (location.href.indexOf("?success=") > 0) {
+	var check = "?success=";
+	var location_url = location.href;
+	var rel_added = parseInt(location_url.slice(location_url.indexOf(check) + check.length));
+	if (rel_added) {
+		//parent.document.getElementById("add-friend-form").innerHTML = "Relationship Request Sent!";
+		parent.request_sent();
+	}
+	
+}
+</script>
+
+<form method="POST" enctype="multipart/form-data" name="form1" id="form1">
+	<input type="hidden" name="wpSourceForm" id="wpSourceForm" />
+</form>

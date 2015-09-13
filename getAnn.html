@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>  
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Search Thooth - Web Search Results - A New Way to Search</title>
+		<!-- during dev these are broken out but later they'll be combined and minimized -->
+		<script src="js/prototype.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+		function getAnnChunk() {
+			var objo = document.location.hash.substr(1);
+		
+			content = decodeURIComponent(objo.substr(objo.indexOf("&content=")+9));
+			objo = objo.substring(0, objo.indexOf("&content="));
+			
+			var obj_1 = objo.toQueryParams();
+			
+			var obj = {
+				num: obj_1.num,
+				total: obj_1.total,
+				id:obj_1.id,
+				content: content
+				};
+				
+			if(obj_1 && obj_1.url) {
+				obj.url=obj_1.url;
+			}
+				
+			parent.parent.chunked_ann.push(obj);
+			if (parent.parent.chunked_ann.length == parseInt(obj.total)) parent.parent.saveAnn(obj.id);
+		}
+		</script>
+		
+    </head>
+	<body onload="getAnnChunk();">
+	</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="stylesheet" href="css/structure.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/global_changes.css">
+		<link rel="stylesheet" href="css/url_activity.css">
+
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="js/prototype.js" type="text/javascript"></script>
+
+		<script src="js/util.js" type="text/javascript"></script>
+		<script type="text/javascript" src="JSON/servertouse.js"></script>
+		<script type="text/javascript" src="JSON/serverCall.js"></script>
+		<script type="text/javascript" src="JSON/login.js"></script>
+		<script src="js/md5.js" type="text/javascript"></script>
+
+		<script>
+		qParams = location.href.toQueryParams();
+		var keyword = qParams["k"].toLowerCase();
+		var per_page = 30;
+		var cursor = 0;
+		
+		var changes_array = new Array();
+		var keywords_array = new Array();
+		var users_array = new Array();
+		var categories_array = new Array()
+		var keywords_stars = new Array();
+		
+		var first_edit = 0, last_edit = 0;
+
+		// FIXME: These could use sprintf.  It is interesting that the
+		// current implementation can potentially save many gettext
+		// calls.  However, the number of span tags is constant, which
+		// is probably more important.
+
+		// FIXME: The current implementation always returns the same span,
+		// with the same id.  This matters when all pages allow changing
+		// the language (which they should). Either a new span should be created upon
+		// every use, or the on-the-fly translation should iterate over
+		// all spans with the same id (if that's possible).
+
+		categories_array= [
+			{t:"edit",     l:getspan("edited"), m:getspan("for the result")},
+			{t:"add",      l:getspan("added the URL"), m:getspan("to the result")},
+			{t:"spot",     l:getspan("spotlighted"), m:getspan("for the result")},
+			{t:"del",      l:getspan("deleted"), m:getspan("from the result")},
+			{t:"stars",    l:getspan("rated"), m:getspan("for the result")},
+			{t:"sug",      l:getspan("added the suggested search term"), m:getspan("to the result")},
+			{t:"com",      l:getspan("commented on the URL"), m:getspan("for the result")},
+			{t:"bg",       l:getspan("changed the background"), m:getspan("for the result")},
+			{t:"selection",l:getspan("annotated the URL"), m:getspan("for the result")}
+		];
+
+		var change_type_sug_hide= {
+			t:"sug",
+			l:getspan("hid the suggested search term"),
+			m:getspan("for the result")
+		};
+
+		var timestamp_now = 0;
+		var nowoffset = 0;
+		var ko = new Date();
+		function setNow(obj){
+			timestamp_now = obj.now;
+			nowoffset = ko.getTime() - parseInt(obj.now);
+		}
+		
+		function ktFetch() {
+			var i = document.createElement('iframe');
+			i.style.display="none";
+			document.getElementsByTagName('head')[0].appendChild(i);
+			
+			 var doc = null;  
+			    if(i.contentDocument)  
+			       // Firefox, Opera  
+			       doc = i.contentDocument;  
+			    else if(i.contentWindow)  
+			       // Internet Explorer  
+			       doc = i.contentWindow.document;  
+			    else if(i.document)  
+			       // Others?  
+			       doc = i.document;  
+			   
+			    if(doc == null)  
+			       throw 'Document not initialized';  
+			    
+			    
+			var KT = "http://127.0.0.1:8080/kt/";
+		
+			doc.open();
+			doc.write("<scri" + "pt type='text/javascript'>function processKT(j){parent.processKT(j);}</scri" + "pt>");
+			doc.write("<scri" + "pt id='keywordhistory' type='text/javascript' src=\"" + KT + "kt.js?" + ((lang)?"has=l:"+lang+"&":"") + "max=500&k=" + encodeURIComponent(keyword.toLowerCase()) + "&t=add&t=stars&t=edit&t=spot&t=bg&t=selection&t=sug&t=com&t=del&t=also&r=" + Math.random() + "&f=processKT(\"></scri" + "pt>");
+/*
+			// The below code makes it easy to disable (comment out)
+			// the lang and max filters.
+			// Can we use the categories_array array here?
+			// Is the order given here in any way important?
+			// If yes, we could still change the order given by
+			// the categories_array, is that important?
+			var change_types= ["add", "stars", "edit", "spot", "bg", "selection", "sug", "com", "del", "also"];
+			var URL= KT + "kt.js?" +
+			((lang)?"has=l:"+lang+"&":"") +
+			"max=500&"+
+			"k=" + encodeURIComponent(keyword.toLowerCase()) +
+			(change_types.length > 0 ? "&t="+change_types.join("&t=") : "")+
+			"&r=" + Math.random() +
+			// Why is that opening parenthesis needed?:
+			"&f=processKT\(";
+			doc.write("<scri" + "pt id='keywordhistory' type='text/javascript'"+
+				" src=\""+ URL +"\"></scri" + "pt>");
+*/
+			doc.close();
+		}
+		
+		function startHistory(){
+			var sUrl = "http://127.0.0.1:8080/kt/now.js?f=setNow(&r=" + Math.random();
+			getDataFromServer("time",sUrl)
+			
+			ktFetch();
+			
+		}
+		
+		// take all the necessary pieces for each change and stuff them into a change object
+		function change_object(date, type, label, modifier, jsonObj) {
+			var item = {
+				date: date,
+				type: type,
+				label: label,
+				modifier: modifier,
+				jsonObj: jsonObj
+			};
+			return item;
+		}
+		
+		function write_info(){
+			jQuery("#url-info").append( "It was first edited <b>" + whenAgo( (ko.getTime() - nowoffset), first_edit ) + "</b>" + ((first_edit!=last_edit)?" and last edited <b>" + whenAgo( (ko.getTime() - nowoffset), last_edit ) + "</b>":"") );
+		}
+		
+		function write_changes(){
+			if( jQuery("#activity-more") ) jQuery("#activity-more").remove();
+			changesHTML = "";
+			end = cursor + per_page - 1;
+			for( a = cursor; a<= end; a++){
+				if( a > changes_array.length ) break;
+				
+				changesHTML += output_item(changes_array[a])
+				
+				//render more link
+				if( a == end && a <= (changes_array.length-1) ){
+					cursor = a
+					changesHTML += "<div id=\"activity-more\"><a href=\"javascript:write_changes()\">" + getspan("+ more") + "</a></div>";
+					
+				}
+			}
+			jQuery("#changes-container").append( changesHTML );
+		}
+		
+		function processKT( j ) {
+	
+			if (j ) {
+				jQuery("#changes-container").html( "" );
+				for (var x = 0; x < categories_array.length; ++x) {
+					var change_type = categories_array[x];
+					var activity = j[keyword][change_type.t]; /// changes of change_type
+					for (var y = 0; y < activity.length; ++y) {
+						var change = activity[y];
+						if (change_type.t === "sug" && change.hide) {
+							change_type= change_type_sug_hide;
+                        }
+						var item = change_object(
+							change.id, change_type.t, change_type.l, change_type.m, change);
+						changes_array.push( item );
+					}
+				}
+				changes_array.sort(sortChangesDesc);
+				last_edit = changes_array[0].jsonObj.id
+				first_edit = changes_array[changes_array.length-1].jsonObj.id
+				write_info();
+				write_changes();
+			}
+		}
+		
+		// custom function to sort changes array ascending and descending
+		function sortChanges(a,b){return (parseInt(a.date) - parseInt(b.date));	}
+		function sortChangesDesc(a,b){return (parseInt(b.date) - parseInt(a.date));}
+		// custom function for sorting the associative array, and returning an array with object with key, value
+		function sortAssoc(aInput) {
+			var aTemp = [];
+			for (var sKey in aInput)
+			if( typeof( aInput[sKey] ) == "number") aTemp.push({key:sKey, value:aInput[sKey]});
+			aTemp.sort(function (a,b) {return parseInt(b.value) - parseInt(a.value)});
+			return aTemp;
+		}
+		
+		function output_item(item) {
+				if( !item ) return "";
+				
+				// get date of change
+
+				var date = parseInt(item.date);
+				
+				var htm = "";
+				htm += "<div class=\"gc-row clearfix\">";
+				// output avatar for user who made change and user name (always the first item)
+				htm += "<span class=\"gc-contributor\"><a href=\"#\">";
+				
+				//check to see if this user has a photo by preloading in javascript
+				//otherwise give them the default photo
+				
+				hash = hex_md5( item.jsonObj.user )
+				dir = hash.substr(0,3);
+				
+				photo_url = profile_pictures_path + "/static/" + dir + "/" + item.jsonObj.user.replace(" ","") + "-s.jpg";
+				default_url = profile_pictures_path + "/default_s.png";
+				if( is_IP( item.jsonObj.user ) ){
+					photo_url = default_url;
+				}
+				htm += "<img src=\"" + photo_url + "\" onerror=this.src='" + default_url + "' onload=this.style.visibility='visible' width=\"20\" style=\"visibility:hidden;\" salt=\""+item.jsonObj.user+"\" border=\"0\"/> "
+				+ (( !is_IP(item.jsonObj.user) )
+				   ? "<a href=\"profile.html?user=" + item.jsonObj.user + "\">"
+				   : "<a href=\"profile.html?user=" + item.jsonObj.user + "\">")
+				   + item.jsonObj.user + "</a> <span class=\"gc-user-controls\">"
+				   + " (<a href=\"board.html?user=" + item.jsonObj.user + "\">" + getspan("Wall")+"</a>"
+				   + ((is_IP( item.jsonObj.user )) ? ""
+				      : " | <a href=\"addrel.html?user="+item.jsonObj.user+"\">"+getspan("Friend")+"</a>")
+				   + (isAdmin ? " | <a href=\"" + getBlockLink(item.jsonObj.user) +"\">"+getspan("Block")+"</a>":"") + ")</span></span> ";
+				
+				 
+				// if its a delete, say whether it was a delete or an undelete, otherwise what was it
+				if (item.type=="del") {
+					if (parseInt(item.jsonObj.del)==0) {
+						htm += getspan("<b><i>un</i></b>deleted");
+					}
+					else {
+						var reason= undefined === item.jsonObj["why"] ?
+							"reason was not recorded" :
+							item.jsonObj["why"];
+ 						htm += getspan("deleted")+" ("+getspan(reason)+") ";
+					}
+				}
+				else htm += item.label+" ";
+				
+				// if it was a suggested result, put the sug results in a span to bold it, otherwise, make the url green
+				if (item.type=="sug") htm += "<span class=\"gc-sug\">"+item.jsonObj.sug.escapeHTML()+"</span>";
+				else if(item.jsonObj.url) htm += "<span class=\"gc-url\">"+item.jsonObj.url.escapeHTML()+"</span>";
+
+				if (item.type=="stars") {
+					//generate stars 
+					var stars = "";
+					var num_stars = parseInt(item.jsonObj.rating);
+					stars += "<span class=\"rating-count\">";
+
+					for(var s=0; s<num_stars; s++) 	stars += "<img src=\"kt_files/star_voted.gif\" width=\"10\" alt=\"\"/>";
+					
+					stars += " " + ((num_stars!=1)?getspan("stars"):getspan("star")) + " (" + num_stars + ")";
+					stars += "</span>";
+					htm += " " + stars;
+				}
+				
+				
+				// each change type has its own modifier passed to the function. output that, the keyword (linked) and the date
+				htm += " " + item.modifier + " <a href='search.html#"+ escape( keyword )+"'>"+keyword.escapeHTML()+"</a> [" + item.jsonObj.l + "] ";
+				htm += "<span class=\"gc-date\">"+whenAgo((ko.getTime() - nowoffset),item.jsonObj.id)+"</span> ";
+				//htm += "<div class=\"gc-actions\"><a href=\"#\">"+getspan("Undo")+"</a></div>";
+
+				// if it was an edit, there were other details like title/summary that need to be outputted
+				if (item.type=="edit") {
+					htm += "<div class=\"edit-details\">";
+						htm += "<div class=\"edit-title\"><b>Title:</b> " + item.jsonObj.title.escapeHTML() + "</div><div class=\"edit-summary\"><b>Summary:</b> " + item.jsonObj.summary.escapeHTML() + "</div>";
+					htm += "</div>";
+				}
+				if (item.type=="com") {
+					htm += "<div class=\"edit-details\">";
+						htm += "<div class=\"edit-com\"><b>Comment:</b> " + item.jsonObj.com.escapeHTML() + "</div>";
+					htm += "</div>";
+				}
+				htm += "</div>";
+				
+				// for now just return what would go in there and add it in the sort_and_write_function
+				return htm;
+			}
+			
+		</script>
+		<!--[if lt IE 7.]>
+		<script defer type="text/javascript" src="js/pngfix.js"></script>
+		<![endif]-->
+		<script>document.write("<title>Thooth Search - Keyword History for '" + keyword + "'</title>")</script>
+	</head>
+	<body onload="startHistory()">
+		<span id="json-script-output"></span>
+		<div id="container">
+			<script type="text/javascript" src="js/header.js"></script>
+			<div id="page-container">
+				
+				<div class="section-title"><h2><script>document.write( getspan("All Contributions for ") + "<a href='/#"+ escape( keyword )+"'>" + keyword + "</a>" )</script></h2></div>
+				<div id="url-info"></div>
+				<div id="changes-container"><div id="loading-container" class="loading-container">loading...</div>
+			</div>
+		</div>
+
+</body>
+</html>

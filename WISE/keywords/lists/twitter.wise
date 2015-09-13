@@ -1,0 +1,10 @@
+WISE.apps.twitter = {
+	"author":"",
+	"description":"Search Latest Twitter Trends API",
+	"logo":"http://twitter.com/favicon.ico",
+	"categories":[ "Blogging" ],
+	"id":"twitter",
+	"regex":/.*(?:twitter )(.+)|(#current|#debate08|my friends|iraq|#nashdebate|that one|teddy roosevelt|tom brokaw|bin laden|#dialtest)$|(#.*)/i,
+	"url":"WISE/apps/wise_twitter.js?r=" + Math.random(),
+	"action":"twitterFetch"
+};

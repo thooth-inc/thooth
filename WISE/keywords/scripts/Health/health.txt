@@ -1,0 +1,1059 @@
+app:healthterms; user:max; l:en
+*****************
+<!doctype html public "-//w3c//dtd html 4.01 transitional//en" "http://www.w3.org/tr/html4/loose.dtd">
+<html>
+<head>
+<title>health information - causes, symptoms, diagnosis, treatment - ny times health</title>
+<!--begin common meta tags--><meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="expires" content="now">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta name="robots" content="noarchive">
+<meta name="cg" content="health">
+<meta name="scg" content="health guide">
+<meta name="pt" content="topic">
+<meta name="pst" content="index">
+<meta name="psst" content="letter">
+<meta name="description" content="free articles and multimedia from the ny times, including information on symptoms, diagnosis, treatments, tests, and surgical procedures, as well as current news and interviews with leading experts. ">
+<!--end common meta tags--><!--begin common script tags--><script type="text/javascript" src="http://graphics8.nytimes.com/js/common.js"></script><script type="text/javascript" src="http://graphics8.nytimes.com/js/browsersize.js"></script><script type="text/javascript" src="http://graphics8.nytimes.com/js/tacoda_ams_ddc_header.js"></script><script type="text/javascript" src="http://graphics8.nytimes.com/js/common/screen/dropdown.js"></script><script type="text/javascript" src="http://graphics8.nytimes.com/js/common/screen/modifynavigationdisplay.js"></script><script type="text/javascript" language="javascript" src="http://graphics8.nytimes.com/js/fileit.js"></script><script type="text/javascript" language="javascript" src="http://graphics8.nytimes.com/js/todays_date.js"></script><script type="text/javascript" language="javascript">
+function linkbox(url, winname) {
+window.open(url, winname,
+"location=yes,directories=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes");
+}
+</script><!--end common script tags--><!--begin common css--><!--[if ie 7]>
+<style type="text/css">
+@import url(http://graphics8.nytimes.com/css/common/screen/ie7.css);
+</style>
+<![endif]--><!--end common css--><script src="http://graphics8.nytimes.com/js/article/articleshare.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/util/sharetab.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/common/screen/blog.js" type="text/javascript"></script><script>
+function showcontentpopup(id) {
+var elem = document.getelementbyid(id);
+
+if (elem) {
+var htmlcontent = elem.innerhtml;
+
+var newwindow = window.open('', 'tablewnd', "width=640px,height=480px,resizable=1,scrollbars=1,location");
+var cssstring = "";
+cssstring += '<link rel="stylesheet" type="text/css" href="http://graphics8.nytimes.com/css/common/global.css">';
+cssstring += '<style type="text/css">';
+cssstring += '@import url(http://graphics8.nytimes.com/css/section/health/screen/200705/tables.css);'
+cssstring += '</style>';
+
+newwindow.document.write('<html>');
+newwindow.document.write('<he'+'ad>');
+newwindow.document.write('<title>times health guide</title>');
+newwindow.document.write(cssstring);
+newwindow.document.write('</he'+'ad>');
+newwindow.document.write('<body>'+htmlcontent+'</body>');
+newwindow.document.write('</html>');
+newwindow.document.close();
+
+}
+}
+</script><script src="http://graphics8.nytimes.com/js/section/health/autocomplete/suggest.js" type="text/javascript"></script>
+<script src="http://graphics8.nytimes.com/js/common/autocomplete/prototype.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/common/autocomplete/scriptaculous.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/common/autocomplete/effects.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/common/autocomplete/dragdrop.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/section/health/autocomplete/controls.js" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="http://graphics8.nytimes.com/css/common/global.css">
+<style type="text/css">
+@import url(http://graphics8.nytimes.com/css/section/health/screen/200705/guide.css);
+</style>
+<!--begin common css--><!--[if ie 7]>
+<style type="text/css">
+@import url(http://graphics8.nytimes.com/css/section/health/screen/200705/ie7.css);
+</style>
+<![endif]--><!--end common css-->
+</head>
+<body><div id="shell">
+<div id="login">
+<ul id="membertools">
+<li><a href="http://www.nytimes.com/auth/login">log in</a></li>
+<li><a href="http://www.nytimes.com/gst/regi.html">register now</a></li>
+</ul>
+<ul class="tabs">
+<li><a href="http://www.nytimes.com">home page</a></li>
+<li><a href="http://my.nytimes.com">my times</a></li>
+<li><a href="http://www.nytimes.com/pages/todayspaper/index.html">today's paper</a></li>
+<li><a href="http://www.nytimes.com/video">video</a></li>
+<li><a href="http://www.nytimes.com/mostpopular">most popular</a></li>
+<li><a href="http://www.nytimes.com/timestopics">times topics</a></li>
+</ul>
+</div>
+<div id="page">
+<div id="masthead">
+<form id="searchform" name="searchform" method="get" action="http://query.nytimes.com/gst/sitesearch_selector.html" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="date_select" value="full"><div id="nytsearchwidget">
+<label for="searchquery">search all nytimes.com</label><input id="searchquery" type="text" name="query"><input id="searchsubmit" title="search" alt="search" type="image" src="http://graphics8.nytimes.com/images/global/buttons/go.gif"><input type="hidden" value="nyt" name="type" id="searchall">
+</div>
+</form>
+<a href="http://www.nytimes.com"><img id="nytlogo" alt="new york times" title="new york times" src="http://graphics8.nytimes.com/images/misc/nytlogo153x23.gif"></a><div id="date"><script language="javascript" type="text/javascript" src="http://graphics8.nytimes.com/js/print_todays_date.js"></script></div>
+<h1><a href="http://health.nytimes.com/health/guides/index.html">health guide</a></h1>
+</div>
+<div id="navigation" class=""><ul class="tabs">
+<li id="navworld"><a href="http://www.nytimes.com/pages/world/index.html">world</a></li>
+<li id="navus"><a href="http://www.nytimes.com/pages/national/index.html">u.s.</a></li>
+<li id="navnyregion"><a href="http://www.nytimes.com/pages/nyregion/index.html">n.y. / region</a></li>
+<li id="navbusiness"><a href="http://www.nytimes.com/pages/business/index.html">business</a></li>
+<li id="navtechnology"><a href="http://tech.nytimes.com/pages/technology/index.html">technology</a></li>
+<li id="navscience"><a href="http://www.nytimes.com/pages/science/index.html">science</a></li>
+<li class="selected" id="navhealth">
+<a href="http://www.nytimes.com/pages/health/index.html">health</a><ul>
+<li><a href="http://www.nytimes.com/pages/health/research/index.html">research</a></li>
+<li><a href="http://www.nytimes.com/pages/health/nutrition/index.html">fitness &amp; nutrition</a></li>
+<li><a href="http://www.nytimes.com/pages/health/policy/index.html">money &amp; policy</a></li>
+<li><a href="http://www.nytimes.com/pages/health/views/index.html">views</a></li>
+<li class="selected nochildren"><a href="http://health.nytimes.com/health/guides/index.html">health guide</a></li>
+</ul>
+</li>
+<li id="navsports"><a href="http://www.nytimes.com/pages/sports/index.html">sports</a></li>
+<li id="navopinion"><a href="http://www.nytimes.com/pages/opinion/index.html">opinion</a></li>
+<li id="navarts"><a href="http://www.nytimes.com/pages/arts/index.html">arts</a></li>
+<li id="navstyle"><a href="http://www.nytimes.com/pages/style/index.html">style</a></li>
+<li id="navtravel"><a href="http://travel.nytimes.com">travel</a></li>
+<li id="navjobs"><a href="http://jobmarket.nytimes.com/pages/jobs/index.html">jobs</a></li>
+<li id="navrealestate"><a href="http://www.nytimes.com/pages/realestate/index.html">real estate</a></li>
+<li id="navautos"><a href="http://www.nytimes.com/pages/automobiles/index.html">autos</a></li>
+</ul></div>
+<script type="text/javascript">modifynavigationdisplay();</script><div id="adxleaderboard"><!-- adxinfo classification="blank-but-count-imps" campaign="blank04-topad-healthguidepages"--><img src="http://graphics8.nytimes.com/ads/blank.gif"></div>
+<div id="main" class="onestrip">
+<a name="top"></a><div id="abcolumns">
+<div id="header_search" class="clearfix"><div class="searchcontent">
+<form action="http://health.nytimes.com/gst/health/healthsearch.html" method="get">
+<div class="clearfix"><label for="term">search health<span class="searchnotes"><a href="http://health.nytimes.com/health/guides/index.html">3,000+ topics</a></span></label></div>
+<div class="srchfield">
+<input id="query_all" name="term" type="text" autocomplete="off"><div class="auto_complete" id="query_suggestions"></div>
+<input class="gobutton" title="go" alt="go" src="http://graphics8.nytimes.com/images/global/buttons/go.gif" align="absbottom" type="image">
+</div>
+<!--autocomplete code--><script type="text/javascript">
+if (navigator.useragent.match('opera') == null) {
+var osuggest = new autocompleter.local('query_all', 'query_suggestions', suggestions, {minchars:3,choices:15,partialsearch:true});
+osuggest.servertype = 'production';
+}
+</script>
+</form>
+<form method="post" style="padding:0; border:0; margin:0" enctype="application/x-www-form-urlencoded" action="http://www.nytimes.com/gst/emailus.html" name="healthfeedback">
+<input type="hidden" name="type" value="health"><input type="hidden" name="recipient" value="health"><input type="hidden" name="url" value=""><input type="hidden" name="author" value=""><input type="hidden" name="name" value=""><a href="javascript:document.healthfeedback.submit()" class="feedback">send feedback</a>
+</form>
+</div></div>
+<div id="mainheader" class="clearfix">
+<h2 class="health-header"><a href="http://health.nytimes.com/health/guides/index.html" title="times health guide"></a></h2>
+<span class="subh1">more than 3,000 topics described, illustrated and investigated</span>
+</div>
+<div class="columngroup">
+<div class="banner"><h4>browse all health topics</h4></div>
+<div class="browsegroup">
+<a href="/health/guides/index.html?letter=a" class="indexitem selected">a</a><a href="/health/guides/index.html?letter=b" class="indexitem">b</a><a href="/health/guides/index.html?letter=c" class="indexitem">c</a><a href="/health/guides/index.html?letter=d" class="indexitem">d</a><a href="/health/guides/index.html?letter=e" class="indexitem">e</a><a href="/health/guides/index.html?letter=f" class="indexitem">f</a><a href="/health/guides/index.html?letter=g" class="indexitem">g</a><a href="/health/guides/index.html?letter=h" class="indexitem">h</a><a href="/health/guides/index.html?letter=i" class="indexitem">i</a><a href="/health/guides/index.html?letter=j" class="indexitem">j</a><a href="/health/guides/index.html?letter=k" class="indexitem">k</a><a href="/health/guides/index.html?letter=l" class="indexitem">l</a><a href="/health/guides/index.html?letter=m" class="indexitem">m</a><a href="/health/guides/index.html?letter=n" class="indexitem">n</a><a href="/health/guides/index.html?letter=o" class="indexitem">o</a><a href="/health/guides/index.html?letter=p" class="indexitem">p</a><a href="/health/guides/index.html?letter=q" class="indexitem">q</a><a href="/health/guides/index.html?letter=r" class="indexitem">r</a><a href="/health/guides/index.html?letter=s" class="indexitem">s</a><a href="/health/guides/index.html?letter=t" class="indexitem">t</a><a href="/health/guides/index.html?letter=u" class="indexitem">u</a><a href="/health/guides/index.html?letter=v" class="indexitem">v</a><a href="/health/guides/index.html?letter=w" class="indexitem">w</a><a href="/health/guides/index.html?letter=x" class="indexitem">x</a><a href="/health/guides/index.html?letter=y" class="indexitem">y</a><a href="/health/guides/index.html?letter=z" class="indexitem">z</a><a href="/health/guides/index.html?letter=0" class="indexitem last">0-9</a>
+</div>
+<div class="singlerule"></div>
+<h2></h2>
+<div class="listitems"><ul>
+<li><a href="http://health.nytimes.com/health/guides/disease/abo-incompatibility/overview.html">abo incompatibility</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/ace-levels/overview.html">ace levels</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/acl-reconstruction/overview.html">acl reconstruction</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/acth/overview.html">acth</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/acth-cortrosyn-stimulation-test/overview.html">acth cortrosyn stimulation test</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/adh/overview.html">adh</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aids/overview.html">aids</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/alp/overview.html">alp</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/alp-isoenzyme-test/overview.html">alp isoenzyme test</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/alt/overview.html">alt</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/apgar/overview.html">apgar</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/ards-acute-respiratory-distress-syndrome/overview.html">ards (acute respiratory distress syndrome)</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/ast/overview.html">ast</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aarskog-syndrome/overview.html">aarskog syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aase-syndrome/overview.html">aase syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/abdomen-swollen/overview.html">abdomen - swollen</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/abdominal-aortic-aneurysm/overview.html">abdominal aortic aneurysm</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/abdominal-ct-scan/overview.html">abdominal ct scan</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/abdominal-exploration/overview.html">abdominal exploration</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/abdominal-film/overview.html">abdominal film</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/abdominal-fullness-prematurely-after-meals/overview.html">abdominal fullness prematurely after meals</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/abdominal-mri/overview.html">abdominal mri</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/abdominal-mass/overview.html">abdominal mass</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/abdominal-pain/overview.html">abdominal pain</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/abdominal-pain-diagnosis/overview.html">abdominal pain diagnosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/abdominal-rigidity/overview.html">abdominal rigidity</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/abdominal-sounds/overview.html">abdominal sounds</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/abdominal-tap/overview.html">abdominal tap</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/abdominal-ultrasound/overview.html">abdominal ultrasound</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/abdominal-wall-fat-pad-biopsy/overview.html">abdominal wall fat pad biopsy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/abdominal-wall-surgery/overview.html">abdominal wall surgery</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/abnormal-posturing/overview.html">abnormal posturing</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/abortion/overview.html">abortion</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/abortion-elective-or-therapeutic/overview.html">abortion - elective or therapeutic</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/abortion-incomplete/overview.html">abortion - incomplete</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/abortion-infected/overview.html">abortion - infected</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/abortion-threatened/overview.html">abortion - threatened</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/abscess/overview.html">abscess</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/abscess-scan-radioactive/overview.html">abscess scan - radioactive</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acanthosis-nigricans/overview.html">acanthosis nigricans</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/acetaminophen-overdose/overview.html">acetaminophen overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/acetaminophen-and-codeine-overdose/overview.html">acetaminophen and codeine overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/acetomeroctol-overdose/overview.html">acetomeroctol overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/acetone-poisoning/overview.html">acetone poisoning</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/acetylcholine-receptor-antibody/overview.html">acetylcholine receptor antibody</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/achalasia/overview.html">achalasia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/achilles-tendinitis/overview.html">achilles tendinitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/achondrogenesis/overview.html">achondrogenesis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/achondroplasia/overview.html">achondroplasia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/acid-loading-test-ph/overview.html">acid loading test ph</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/acid-mucopolysaccharides/overview.html">acid mucopolysaccharides</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/acid-fast-stain/overview.html">acid-fast stain</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acidosis/overview.html">acidosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acne/overview.html">acne</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acoustic-neuroma/overview.html">acoustic neuroma</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acoustic-trauma/overview.html">acoustic trauma</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acquired-platelet-function-defect/overview.html">acquired platelet function defect</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acrodermatitis/overview.html">acrodermatitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acrodysostosis/overview.html">acrodysostosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acromegaly/overview.html">acromegaly</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/actinic-keratosis/overview.html">actinic keratosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/actinomycosis/overview.html">actinomycosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-adrenal-crisis/overview.html">acute adrenal crisis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-arterial-occlusion-kidney/overview.html">acute arterial occlusion - kidney</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-bilateral-obstructive-uropathy/overview.html">acute bilateral obstructive uropathy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-bronchitis/overview.html">acute bronchitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-cerebellar-ataxia/overview.html">acute cerebellar ataxia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-cholecystitis-gallstones/overview.html">acute cholecystitis (gallstones)</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-cytomegalovirus-cmv-infection/overview.html">acute cytomegalovirus (cmv) infection</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-gouty-arthritis/overview.html">acute gouty arthritis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-hiv-infection/overview.html">acute h.i.v. infection</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-kidney-failure/overview.html">acute kidney failure</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-lymphocytic-leukemia-all/overview.html">acute lymphocytic leukemia (all)</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-mountain-sickness/overview.html">acute mountain sickness</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-myeloid-leukemia/overview.html">acute myeloid leukemia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-nephritic-syndrome/overview.html">acute nephritic syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-pancreatitis/overview.html">acute pancreatitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-tubular-necrosis/overview.html">acute tubular necrosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-unilateral-obstructive-uropathy/overview.html">acute unilateral obstructive uropathy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/acute-upper-airway-obstruction/overview.html">acute upper airway obstruction</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/addisons-disease/overview.html">addison's disease</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/adenoid-removal/overview.html">adenoid removal</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/adenomyosis/overview.html">adenomyosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/adhesion/overview.html">adhesion</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/adjustment-disorder/overview.html">adjustment disorder</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/adolescent-depression/overview.html">adolescent depression</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/adolescent-development/overview.html">adolescent development</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/adolescent-pregnancy/overview.html">adolescent pregnancy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/adrenal-glands/overview.html">adrenal glands</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/adrenalectomy/overview.html">adrenalectomy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/adrenergic-bronchodilators-overdose/overview.html">adrenergic bronchodilators overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/adrenocortical-carcinoma/overview.html">adrenocortical carcinoma</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/adrenoleukodystrophy/overview.html">adrenoleukodystrophy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/adult-stills-disease/overview.html">adult still's disease</a></li>
+<li><a href="http://health.nytimes.com/health/guides/nutrition/aflatoxin/overview.html">aflatoxin</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/after-shaves/overview.html">after shaves</a></li></ul><ul><li><a href="http://health.nytimes.com/health/guides/disease/agammaglobulinemia/overview.html">agammaglobulinemia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/nutrition/age-appropriate-diet-for-children/overview.html">age-appropriate diet for children</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/age-related-hearing-loss/overview.html">age-related hearing loss</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-body-shape/overview.html">aging changes in body shape</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-hair-and-nails/overview.html">aging changes in hair and nails</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-hormone-production/overview.html">aging changes in hormone production</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-immunity/overview.html">aging changes in immunity</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-organs-tissue-cells/overview.html">aging changes in organs - tissue - cells</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-skin/overview.html">aging changes in skin</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-sleep/overview.html">aging changes in sleep</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-vital-signs/overview.html">aging changes in vital signs</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-the-bones-muscles-joints/overview.html">aging changes in the bones - muscles - joints</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-the-face/overview.html">aging changes in the face</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-the-female-reproductive-system/overview.html">aging changes in the female reproductive system</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-the-heart-and-blood-vessels/overview.html">aging changes in the heart and blood vessels</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-the-kidneys/overview.html">aging changes in the kidneys</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-the-lungs/overview.html">aging changes in the lungs</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-the-male-reproductive-system/overview.html">aging changes in the male reproductive system</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-the-nervous-system/overview.html">aging changes in the nervous system</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/aging-changes-in-the-senses/overview.html">aging changes in the senses</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/agitation/overview.html">agitation</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/agoraphobia/overview.html">agoraphobia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/agranulocytosis/overview.html">agranulocytosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aicardi-syndrome/overview.html">aicardi syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/albinism/overview.html">albinism</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/albumin-serum/overview.html">albumin - serum</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/alcohol-use/overview.html">alcohol use</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alcohol-withdrawal/overview.html">alcohol withdrawal</a></li>
+<li><a href="http://health.nytimes.com/health/guides/nutrition/alcohol-and-diet/overview.html">alcohol and diet</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alcoholic-cardiomyopathy/overview.html">alcoholic cardiomyopathy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alcoholic-ketoacidosis/overview.html">alcoholic ketoacidosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alcoholic-liver-disease/overview.html">alcoholic liver disease</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alcoholic-neuropathy/overview.html">alcoholic neuropathy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alcoholism/overview.html">alcoholism</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/aldolase/overview.html">aldolase</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/aldosterone/overview.html">aldosterone</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alkalosis/overview.html">alkalosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alkaptonuria/overview.html">alkaptonuria</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/allergic-conjunctivitis/overview.html">allergic conjunctivitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/injury/allergic-reactions/overview.html">allergic reactions</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/allergic-rhinitis/overview.html">allergic rhinitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/allergic-vasculitis/overview.html">allergic vasculitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/allergies/overview.html">allergies</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/allergy-testing/overview.html">allergy testing</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/allergy-to-mold-dander-dust/overview.html">allergy to mold - dander - dust</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/aloe/overview.html">aloe</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alopecia-areata/overview.html">alopecia areata</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/alpha-fetoprotein/overview.html">alpha fetoprotein</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/alpha-1-antitrypsin/overview.html">alpha-1 antitrypsin</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alpha-1-antitrypsin-deficiency/overview.html">alpha-1 antitrypsin deficiency</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alport-syndrome/overview.html">alport syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alstrm-syndrome/overview.html">alström syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/alzheimers-disease/overview.html">alzheimer's disease</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/amaurosis-fugax/overview.html">amaurosis fugax</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/ambiguous-genitalia/overview.html">ambiguous genitalia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/amblyopia/overview.html">amblyopia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/amebiasis/overview.html">amebiasis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/amebic-liver-abscess/overview.html">amebic liver abscess</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/amelogenesis-imperfecta/overview.html">amelogenesis imperfecta</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/amenorrhea-primary/overview.html">amenorrhea - primary</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/aminoaciduria/overview.html">aminoaciduria</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/aminophylline-overdose/overview.html">aminophylline overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/amitriptyline-hydrochloride-overdose/overview.html">amitriptyline hydrochloride overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/amitriptyline-and-perphenazine-overdose/overview.html">amitriptyline and perphenazine overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/ammonia-poisoning/overview.html">ammonia poisoning</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/ammonium-hydroxide-poisoning/overview.html">ammonium hydroxide poisoning</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/ammonium-ion/overview.html">ammonium ion</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/amniocentesis/overview.html">amniocentesis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/amniotic-constriction-bands/overview.html">amniotic constriction bands</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/amniotic-fluid/overview.html">amniotic fluid</a></li>
+<li><a href="http://health.nytimes.com/health/guides/injury/amputation-traumatic/overview.html">amputation - traumatic</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/amylase-blood/overview.html">amylase - blood</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/amylase-urine/overview.html">amylase - urine</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/amyotrophic-lateral-sclerosis/overview.html">amyotrophic lateral sclerosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/anal-fissure/overview.html">anal fissure</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/analgesic-nephropathy/overview.html">analgesic nephropathy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/anaphylaxis/overview.html">anaphylaxis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/anaplastic-thyroid-cancer/overview.html">anaplastic thyroid cancer</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/androgen-insensitivity-syndrome/overview.html">androgen insensitivity syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/anemia/overview.html">anemia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/anemia-b12-deficiency/overview.html">anemia - b12 deficiency</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/anemia-of-chronic-disease/overview.html">anemia of chronic disease</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/anencephaly/overview.html">anencephaly</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aneurysm/overview.html">aneurysm</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aneurysm-in-the-brain/overview.html">aneurysm in the brain</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/angina/overview.html">angina</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/angiodysplasia-of-the-colon/overview.html">angiodysplasia of the colon</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/angioedema/overview.html">angioedema</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/angioplasty/overview.html">angioplasty</a></li>
+<li><a href="http://health.nytimes.com/health/guides/injury/animal-bites/overview.html">animal bites</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/anisocoria/overview.html">anisocoria</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/ankle-pain/overview.html">ankle pain</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/ankle-replacement/overview.html">ankle replacement</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/ankylosing-spondylitis/overview.html">ankylosing spondylitis</a></li></ul><ul><li><a href="http://health.nytimes.com/health/guides/disease/annular-pancreas/overview.html">annular pancreas</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/anorchia/overview.html">anorchia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/anorectal-abscess/overview.html">anorectal abscess</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/anorexia-nervosa/overview.html">anorexia nervosa</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/anoscopy/overview.html">anoscopy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/injury/anterior-cruciate-ligament-acl-injury/overview.html">anterior cruciate ligament (acl) injury</a></li>
+<li><a href="http://health.nytimes.com/health/guides/injury/anterior-knee-pain/overview.html">anterior knee pain</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/anterior-vaginal-wall-repair/overview.html">anterior vaginal wall repair</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/anthrax/overview.html">anthrax</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/anti-dnase-b/overview.html">anti-dnase b</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/anti-glomerular-basement-membrane/overview.html">anti-glomerular basement membrane</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/anti-insulin-antibody-test/overview.html">anti-insulin antibody test</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/anti-rust-products/overview.html">anti-rust products</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/anti-smooth-muscle-antibody/overview.html">anti-smooth muscle antibody</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/antibody-titer/overview.html">antibody titer</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/antidiarrheal-agent-overdose/overview.html">antidiarrheal agent overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/antifreeze/overview.html">antifreeze</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/antimitochondrial-antibody/overview.html">antimitochondrial antibody</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/antinuclear-antibody-panel/overview.html">antinuclear antibody panel</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/antiparietal-cells-antibodies/overview.html">antiparietal cells antibodies</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/antisocial-personality-disorder/overview.html">antisocial personality disorder</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/antistreptolysin-o-titer/overview.html">antistreptolysin o titer</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/antithrombin-iii/overview.html">antithrombin iii</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/antithyroglobulin-antibody/overview.html">antithyroglobulin antibody</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/antithyroid-microsomal-antibody/overview.html">antithyroid microsomal antibody</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/aortic-angiography/overview.html">aortic angiography</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aortic-arch-syndrome/overview.html">aortic arch syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aortic-dissection/overview.html">aortic dissection</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aortic-insufficiency/overview.html">aortic insufficiency</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aortic-stenosis/overview.html">aortic stenosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/apert-syndrome/overview.html">apert syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/apnea-of-prematurity/overview.html">apnea of prematurity</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/apolipoprotein-b100/overview.html">apolipoprotein b100</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/apolipoprotein-cii/overview.html">apolipoprotein cii</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/appendectomy/overview.html">appendectomy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/appendicitis/overview.html">appendicitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/appetite-decreased/overview.html">appetite - decreased</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/appetite-increased/overview.html">appetite - increased</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/apraxia/overview.html">apraxia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/arachnodactyly/overview.html">arachnodactyly</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/armpit-lump/overview.html">armpit lump</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/arrhenoblastoma-of-ovary/overview.html">arrhenoblastoma of ovary</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/arrhythmias/overview.html">arrhythmias</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/arterial-embolism/overview.html">arterial embolism</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/arterial-stick/overview.html">arterial stick</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/arteriogram/overview.html">arteriogram</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/arteriosclerosis-of-the-extremities/overview.html">arteriosclerosis of the extremities</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/arteriovenous-malformation-cerebral/overview.html">arteriovenous malformation - cerebral</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/arthritis/overview.html">arthritis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/arthroscopy/overview.html">arthroscopy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/asbestosis/overview.html">asbestosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/ascariasis/overview.html">ascariasis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/ascites/overview.html">ascites</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aseptic-meningitis/overview.html">aseptic meningitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aseptic-necrosis/overview.html">aseptic necrosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/asherman-syndrome/overview.html">asherman syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/asperger-syndrome/overview.html">asperger syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aspergillosis/overview.html">aspergillosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/aspergillosis-precipitin/overview.html">aspergillosis precipitin</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/aspergillus-antigen-skin-test/overview.html">aspergillus antigen skin test</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/asphalt-cement/overview.html">asphalt cement</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/aspiration-pneumonia/overview.html">aspiration pneumonia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/aspirin-overdose/overview.html">aspirin overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/asthma/overview.html">asthma</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/astigmatism/overview.html">astigmatism</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/asymptomatic-bacteriuria/overview.html">asymptomatic bacteriuria</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/asymptomatic-hiv-infection/overview.html">asymptomatic hiv infection</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/ataxia-telangiectasia/overview.html">ataxia - telangiectasia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/atelectasis/overview.html">atelectasis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/atheroembolic-renal-disease/overview.html">atheroembolic renal disease</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/atherosclerosis/overview.html">atherosclerosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/athletes-foot/overview.html">athlete's foot</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/atrial-fibrillationflutter/overview.html">atrial fibrillation/flutter</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/atrial-myxoma/overview.html">atrial myxoma</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/atrial-septal-defect/overview.html">atrial septal defect</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/atrophic-vaginitis/overview.html">atrophic vaginitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/attention-deficit-hyperactivity-disorder-adhd/overview.html">attention deficit hyperactivity disorder (adhd)</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/atypical-mycobacterial-infection/overview.html">atypical mycobacterial infection</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/atypical-pneumonia/overview.html">atypical pneumonia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/audiology/overview.html">audiology</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/autism/overview.html">autism</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/autistic-behavior/overview.html">autistic behavior</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/autoimmune-disorders/overview.html">autoimmune disorders</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/autoimmune-hepatitis/overview.html">autoimmune hepatitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/autoimmune-liver-disease-panel/overview.html">autoimmune liver disease panel</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/automatic-dishwasher-soap-poisoning/overview.html">automatic dishwasher soap - poisoning</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/autonomic-hyperreflexia/overview.html">autonomic hyperreflexia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/autonomic-neuropathy/overview.html">autonomic neuropathy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/autosomal-dominant/overview.html">autosomal dominant</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/autosomal-recessive/overview.html">autosomal recessive</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/avian-influenza/overview.html">avian influenza</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/avoidant-personality-disorder/overview.html">avoidant personality disorder</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/axillary-nerve-dysfunction/overview.html">axillary nerve dysfunction</a></li>
+</ul></div>
+</div>
+</div>
+<div class="ccolumn">
+<div class="columngroup firstcolumngroup"><div class="relatedstories well">
+<h3 class="sectionheader"><a href="http://well.blogs.nytimes.com/" title="well">well</a></h3>
+<div class="story">
+<h5 class="first"><a href="http://well.blogs.nytimes.com/2008/10/03/parents-often-unaware-of-cyber-bullying/">parents often unaware of cyber-bullying</a></h5>
+<p class="date">october 3, 2008, <span class="timestamp">9:41 am</span></p>
+</div>
+<div class="story">
+<h5><a href="http://well.blogs.nytimes.com/2008/10/02/bad-news-delivered-badly/">bad news, delivered badly</a></h5>
+<p class="date">october 2, 2008</p>
+</div>
+<div class="story">
+<h5><a href="http://well.blogs.nytimes.com/2008/10/02/dieters-gain-more-weight-during-pregnancy/">dieters gain more weight during pregnancy</a></h5>
+<p class="date">october 2, 2008</p>
+</div>
+<div class="story">
+<h5><a href="http://well.blogs.nytimes.com/2008/10/02/emails-and-lies/">e-mails and lies</a></h5>
+<p class="date">october 2, 2008</p>
+</div>
+<div class="story">
+<h5><a href="http://well.blogs.nytimes.com/2008/10/01/vitamin-c-may-interfere-with-cancer-treatment/">vitamin c may interfere with cancer treatment</a></h5>
+<p class="date">october 1, 2008</p>
+</div>
+<p class="more"><a href="http://well.blogs.nytimes.com/">more blog headlines »</a></p>
+</div></div>
+<div class="columngroup" style="text-align:center"><div class="clearfix"><script type="text/javascript" src="http://ad.yieldmanager.com/st?ad_type=ad&ad_size=336x280,300x250&section=394778"></script><div style="font-family: arial; font-size: 10px; color:#004276; float: right; margin-right: 9px;"><a href="http://www.nytimes.whsites.net/mediakit/">advertise on nytimes.com</a></div></div></div>
+<div class="columngroup"><!-- adxinfo classification="feature_squares" campaign="regilite-p1-play2008-wk3"--><iframe title="regilite" src="http://www.nytimes.com/gst/litesub_insert.html?product=pl&size=336x90" width="336" height="90" marginheight="0" marginwidth="0" frameborder="0" vspace="0" hspace="0" scrolling="no"></iframe> </div>
+<div class="columngroup"><div class="clearfix" id="health_fit_tools">
+<h3 class="promo">health &amp; fitness tools</h3>
+<a href="http://www.nytimes.com/ref/health/bmi.html"><img src="http://graphics8.nytimes.com/images/2007/04/30/health/health_tool.gif" alt="" class="callout" border="0" height="75" hspace="0" vspace="0" width="75"></a><h5><a href="http://www.nytimes.com/ref/health/bmi.html">bmi calculator</a></h5>
+<a href="http://www.nytimes.com/ref/health/bmi.html" class="more">what's your score? »</a><h5><a href="http://www.nytimes.com/ref/health/caloriecounter.html">calorie calculator for goal weight</a></h5>
+<a href="http://www.nytimes.com/ref/health/caloriecounter.html" class="more">what's your limit? »</a><div id="frame5a"><!-- health promo -->
+<div style="border:solid #333; border-width:10px 1px; font-family:arial,sans-serif; text-align:left; width:334px; background:#fff;position: relative;"><div style="float:left; text-align:left; width: 120px;"><a target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=frame5a&sn2=69d396b9/bae9d006&sn1=a8405b69/869d1565&camp=health-marketingmodule-frame5a&ad=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol&goto=http://health.nytimes.com/health/guides/nutrition/cholesterol/overview.html%3fwt.mc_id=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol%26wt.mc_ev=click%26mkt=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol"><img src="http://graphics8.nytimes.com/ads/marketing/mm08/image-cholesterol.gif" width="120" height="123" border="0"></a></div><div style="float:right; width:214px;"><h2 style="margin:0;padding:11px 5px 1px 10px;font-size:22px;"><a style="color:#660000;" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=frame5a&sn2=69d396b9/bae9d006&sn1=a8405b69/869d1565&camp=health-marketingmodule-frame5a&ad=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol&goto=http://health.nytimes.com/health/guides/nutrition/cholesterol/overview.html%3fwt.mc_id=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol%26wt.mc_ev=click%26mkt=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol">tips to lower<br />your cholesterol.</a></h2>     <h3 style="margin:0;padding: 0 0 15px 11px;font-size:11px;"><a style="color:#333333;" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=frame5a&sn2=69d396b9/bae9d006&sn1=a8405b69/869d1565&camp=health-marketingmodule-frame5a&ad=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol&goto=http://health.nytimes.com/health/guides/nutrition/cholesterol/overview.html%3fwt.mc_id=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol%26wt.mc_ev=click%26mkt=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol">learn more &raquo;</a></h3><a style="color:#333333;" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=frame5a&sn2=69d396b9/bae9d006&sn1=a8405b69/869d1565&camp=health-marketingmodule-frame5a&ad=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol&goto=http://www.nytimes.com/pages/health/index.html%3fwt.mc_id=hl-d-i-nyt-mod-fp-cm1-hl-0308-l1%26wt.mc_ev=click%26mkt=hl-d-i-nyt-mod-fp-cm1-hl-0308-l1"><img src="http://graphics8.nytimes.com/ads/marketing/mm08/health-url.gif" alt="nytimes.com/health" width="166" height="17" longdesc="http://www.nytimes.com/pages/health/index.html" border="0" style="margin-left: 9px;" /></a></div><div style="clear: both;"></div></div>
+<!-- /health promo --></div>
+</div></div>
+<div id="mostpopwidget" class="columngroup">
+<h4>most popular - health</h4>
+<div id="tabscontainer"><ul class="tabs">
+<li class="selected"><a href="#">e-mailed</a></li>
+<li><a href="#">blogged</a></li>
+</ul></div>
+<!-- close tabscontainer --><div class="tabcontent tabcontentactive" id="mostemailed">
+<ol>
+<li><a href="http://www.nytimes.com/2008/10/04/health/policy/04drug.html?em" title="click to go to this article">top psychiatrist failed to report drug income</a></li>
+<li><a href="http://www.nytimes.com/2008/10/02/health/nutrition/02recipehealth.html?em" title="click to go to this article">recipes for health:&nbsp;tuna risotto</a></li>
+<li><a href="http://www.nytimes.com/2008/10/02/health/nutrition/02best.html?em" title="click to go to this article">personal best:&nbsp;before hustling to finish, relaxed is a good way to start</a></li>
+<li><a href="http://www.nytimes.com/2008/10/01/health/01psych.html?em" title="click to go to this article">psychoanalytic therapy wins backing</a></li>
+<li><a href="http://well.blogs.nytimes.com/2008/10/03/parents-often-unaware-of-cyber-bullying/?em" title="click to go to this article">well: parents often unaware of cyber-bullying</a></li>
+<li><a href="http://consults.blogs.nytimes.com/2008/10/03/whats-the-healthiest-diet-of-all/?em" title="click to go to this article">consults: what&#8217;s the healthiest diet of all?</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30online.html?em" title="click to go to this article">logging on for a second (or third) opinion</a></li>
+<li><a href="http://well.blogs.nytimes.com/2008/10/01/vitamin-c-may-interfere-with-cancer-treatment/?em" title="click to go to this article">well: vitamin c may interfere with cancer treatment</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30stud.html?em" title="click to go to this article">searching for clarity: a primer on medical studies</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/views/30chen.html?em" title="click to go to this article">doctor and patient:&nbsp;the dance before the diagnosis</a></li>
+</ol>
+<a class="more" href="http://www.nytimes.com/gst/mostemailed.html">go to complete list »</a>
+</div>
+<!-- close tabcontent mostemailed --><div class="tabcontent" id="mostblogged">
+<ol>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30online.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">logging on for a second (or third) opinion</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30stud.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">searching for clarity: a primer on studies</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30pati.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">you're sick. now what? knowledge is power.</a></li>
+<li><a href="http://www.nytimes.com/2008/10/01/health/01psych.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">psychoanalytic therapy wins backing</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/views/30essa.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">healthy right up to the day you're not</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/research/30tria.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">applying science to alternative medicine</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30find.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">you can find dr. right, with some effort</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30brod.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">crisis of care on the front line of health</a></li>
+<li><a href="http://www.nytimes.com/imagepages/2008/09/30/health/30study.graphic.ready.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">how to read a medical study (skeptically)</a></li>
+</ol>
+<a class="more" href="http://www.nytimes.com/gst/mostblogged.html">go to complete list »</a>
+</div>
+<!-- close tabcontent mostblogged --><script type="text/javascript">new accordian("mostpopwidget");</script>
+</div>
+<div class="columngroup"><!-- adxinfo classification="feature_position" campaign="nyt2008-marketingmodule_v2"-->
+<!-- marketing module -->
+<div style="border:solid #333;border-width:10px 1px;font-family:arial,sans-serif;text-align:left; width:334px;background:#fff">
+
+<div style="padding:9px 14px;background:#fff"> <a style="float:left" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://nytimes.com/%3fwt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-logo%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-logo" target="_new"><img src="http://graphics8.nytimes.com/ads/marketing/mm07/nyt-logo.png" alt="the new york times" width="151" height="26" border="0"></a>
+<a style="float:right" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://movies.nytimes.com/pages/movies/index.html%3fwt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-vrt%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-vrt" target="_new"><img src="http://graphics8.nytimes.com/ads/marketing/mm07/vertical_movies.gif" alt="movies" width="145" height="23" border="0"></a>
+<p style="font-family:arial,sans-serif; clear:both; text-align:right; font-weight:bold; font-size:11px; margin:0;padding:0;">
+<a href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://movies.nytimes.com/pages/movies/index.html%3fwt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-url%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-url" target="_new">nytimes.com/movies</a>
+</p>
+</div>
+
+<a href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://www.nytimes.com/2008/09/28/movies/28newman.html%3fex=1238299200%26en=deecdfa71c1b8cda%26ei=5087%26wt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-ph%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-ph" target="_new"><img src="http://graphics8.nytimes.com/ads/marketing/mm08/movies_100308.jpg" width="334" height="105" border="0"></a>
+<div style="padding:9px 14px;background:#fff">
+<h2 style="font-size:18px;margin:0"><a style="color:#484944;" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://www.nytimes.com/2008/09/28/movies/28newman.html%3fex=1238299200%26en=deecdfa71c1b8cda%26ei=5087%26wt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-hdr%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-hdr ">the life of paul newman</a></h2>
+<p style="font-size:11px;margin:3px 0;padding:0;font-family:arial,sans-serif;">also in movies:</p>
+<ul style="font-size:11px;margin:0" class="refer">
+<li style="font-size:11px"><a style="text-decoration:underline" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://www.nytimes.com/2008/09/28/movies/28paul.html%3fex=1238299200%26en=b2bafedddfd87036%26ei=5087%26wt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-l1%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-l1 ">an actor whose baby blues came in shades of gray</a></li>
+<li style="font-size:11px"><a style="text-decoration:underline" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://www.nytimes.com/interactive/2008/09/27/movies/20080927_newman_audioss/index.html%3fex=1238299200%26en=43339f111d0ca839%26ei=5087%26wt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-l2%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-l2 ">a late, great movie star</a></li>
+<li style="font-size:11px"><a style="text-decoration:underline" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://www.nytimes.com/2008/09/28/movies/28hotchner.html%3fex=1238299200%26en=e3257fb0d4781023%26ei=5087%26wt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-l3%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-l3 ">newman remembered as a good neighbor and a good friend</a></li>
+</ul>
+</div>
+
+</div>
+<!-- /marketing module --></div>
+<div class="columngroup clearfix" id="aroundweb">
+<h3>health around the web</h3>
+<script src="http://service.blogrunner.com/fetch/?u=http://www.blogrunner.com/snapshot/topics/3/8/46a0f9b60c30b638/inbox.xml&amp;o=nyt,js&amp;f=nyt_health&amp;n=3"></script><a href="http://www.blogrunner.com/snapshot/topics/2/0/42eb90d608e1420b/" target="_blank" class="byline ads">powered by blogrunner</a>
+</div>
+</div>
+<br clear="all">
+</div>
+<div class="hidecontent">
+<script language="javascript">
+var user_type = "0";
+var s_prop20 = "";
+var s_account = "nytimesglobal,nythealth";
+var dcsvid = "";
+var regstatus = "non-registered";
+var s_pagename = "/health/guides/index.html";
+var s_channel = "health";
+var s_prop1 = "health index";
+tacoda_ams_ddc_addpair( "t_section","health" );
+</script>
+
+<script src="http://graphics8.nytimes.com/js/app/analytics/trackingtags_v1.1.js" type="text/javascript"></script><noscript><div><img alt="dcsimg" id="dcsimg" width="1" height="1" src="http://wt.o.nytimes.com/dcsym57yw10000s1s8g0boozt_9t1x/njs.gif?dcsuri=/nojavascript&amp;wt.js=no&amp;wt.tv=1.0.7"/></div></noscript>
+
+
+
+<!-- start upt call --><img height="1" width="3" border="0" src="http://up.nytimes.com/?d=0/18/&amp;t=&amp;s=0&amp;ui=&amp;r=&amp;u=health.nytimes.com%2funprotected%2fhealth%2fhealthguide.php"><!-- end upt call -->
+<img src="/adx/bin/clientside/100458e3q2fvouz)vq5cq2ad@.oq5ct.5.q2aq2abq5exq5bdii" height="1" width="3"></div>
+<div id="footer">
+<div class="footerrow">
+<a href="http://www.nytimes.com">home</a><ul>
+<li><a href="http://www.nytimes.com/pages/world/index.html">world</a></li>
+<li><a href="http://www.nytimes.com/pages/national/index.html">u.s.</a></li>
+<li><a href="http://www.nytimes.com/pages/nyregion/index.html">n.y. / region</a></li>
+<li><a href="http://www.nytimes.com/pages/business/index.html">business</a></li>
+<li><a href="http://tech.nytimes.com/pages/technology/index.html">technology</a></li>
+<li><a href="http://www.nytimes.com/pages/science/index.html">science</a></li>
+<li><a href="http://www.nytimes.com/pages/health/index.html">health</a></li>
+<li><a href="http://www.nytimes.com/pages/sports/index.html">sports</a></li>
+<li><a href="http://www.nytimes.com/pages/opinion/index.html">opinion</a></li>
+<li><a href="http://www.nytimes.com/pages/arts/index.html">arts</a></li>
+<li><a href="http://www.nytimes.com/pages/style/index.html">style</a></li>
+<li><a href="http://travel.nytimes.com">travel</a></li>
+<li><a href="http://jobmarket.nytimes.com/pages/jobs/index.html">jobs</a></li>
+<li><a href="http://www.nytimes.com/pages/realestate/index.html">real estate</a></li>
+<li><a href="http://www.nytimes.com/pages/automobiles/index.html">autos</a></li>
+<li><a href="#top">back to top</a></li>
+</ul>
+</div>
+<a href="http://www.nytimes.com/ref/membercenter/help/copyright.html">copyright  2008</a> <a href="http://www.nytco.com/">the new york times company</a><ul>
+<li><a href="http://www.nytimes.com/privacy">privacy policy</a></li>
+<li><a href="http://www.nytimes.com/search">search</a></li>
+<li><a href="http://www.nytimes.com/corrections.html">corrections</a></li>
+<li><a href="http://www.nytimes.com/rss" class="rssbutton">rss</a></li>
+<li><a href="http://firstlook.nytimes.com">first look</a></li>
+<li><a href="http://www.nytimes.com/membercenter/sitehelp.html">help</a></li>
+<li><a href="http://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">contact us</a></li>
+<li><a href="http://www.nytco.com/career.html">work for us</a></li>
+<li><a href="http://www.nytimes.whsites.net/mediakit/">media kit</a></li>
+<li><a href="http://spiderbites.nytimes.com/">site map</a></li>
+</ul>
+</div>
+</div>
+</div></body>
+</html>
+<!doctype html public "-//w3c//dtd html 4.01 transitional//en" "http://www.w3.org/tr/html4/loose.dtd">
+<html>
+<head>
+<title>health information - causes, symptoms, diagnosis, treatment - ny times health</title>
+<!--begin common meta tags--><meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="expires" content="now">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta name="robots" content="noarchive">
+<meta name="cg" content="health">
+<meta name="scg" content="health guide">
+<meta name="pt" content="topic">
+<meta name="pst" content="index">
+<meta name="psst" content="letter">
+<meta name="description" content="free articles and multimedia from the ny times, including information on symptoms, diagnosis, treatments, tests, and surgical procedures, as well as current news and interviews with leading experts. ">
+<!--end common meta tags--><!--begin common script tags--><script type="text/javascript" src="http://graphics8.nytimes.com/js/common.js"></script><script type="text/javascript" src="http://graphics8.nytimes.com/js/browsersize.js"></script><script type="text/javascript" src="http://graphics8.nytimes.com/js/tacoda_ams_ddc_header.js"></script><script type="text/javascript" src="http://graphics8.nytimes.com/js/common/screen/dropdown.js"></script><script type="text/javascript" src="http://graphics8.nytimes.com/js/common/screen/modifynavigationdisplay.js"></script><script type="text/javascript" language="javascript" src="http://graphics8.nytimes.com/js/fileit.js"></script><script type="text/javascript" language="javascript" src="http://graphics8.nytimes.com/js/todays_date.js"></script><script type="text/javascript" language="javascript">
+function linkbox(url, winname) {
+window.open(url, winname,
+"location=yes,directories=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes,scrollbars=yes");
+}
+</script><!--end common script tags--><!--begin common css--><!--[if ie 7]>
+<style type="text/css">
+@import url(http://graphics8.nytimes.com/css/common/screen/ie7.css);
+</style>
+<![endif]--><!--end common css--><script src="http://graphics8.nytimes.com/js/article/articleshare.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/util/sharetab.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/common/screen/blog.js" type="text/javascript"></script><script>
+function showcontentpopup(id) {
+var elem = document.getelementbyid(id);
+
+if (elem) {
+var htmlcontent = elem.innerhtml;
+
+var newwindow = window.open('', 'tablewnd', "width=640px,height=480px,resizable=1,scrollbars=1,location");
+var cssstring = "";
+cssstring += '<link rel="stylesheet" type="text/css" href="http://graphics8.nytimes.com/css/common/global.css">';
+cssstring += '<style type="text/css">';
+cssstring += '@import url(http://graphics8.nytimes.com/css/section/health/screen/200705/tables.css);'
+cssstring += '</style>';
+
+newwindow.document.write('<html>');
+newwindow.document.write('<he'+'ad>');
+newwindow.document.write('<title>times health guide</title>');
+newwindow.document.write(cssstring);
+newwindow.document.write('</he'+'ad>');
+newwindow.document.write('<body>'+htmlcontent+'</body>');
+newwindow.document.write('</html>');
+newwindow.document.close();
+
+}
+}
+</script><script src="http://graphics8.nytimes.com/js/section/health/autocomplete/suggest.js" type="text/javascript"></script>
+<script src="http://graphics8.nytimes.com/js/common/autocomplete/prototype.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/common/autocomplete/scriptaculous.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/common/autocomplete/effects.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/common/autocomplete/dragdrop.js" type="text/javascript"></script><script src="http://graphics8.nytimes.com/js/section/health/autocomplete/controls.js" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="http://graphics8.nytimes.com/css/common/global.css">
+<style type="text/css">
+@import url(http://graphics8.nytimes.com/css/section/health/screen/200705/guide.css);
+</style>
+<!--begin common css--><!--[if ie 7]>
+<style type="text/css">
+@import url(http://graphics8.nytimes.com/css/section/health/screen/200705/ie7.css);
+</style>
+<![endif]--><!--end common css-->
+</head>
+<body><div id="shell">
+<div id="login">
+<ul id="membertools">
+<li><a href="http://www.nytimes.com/auth/login">log in</a></li>
+<li><a href="http://www.nytimes.com/gst/regi.html">register now</a></li>
+</ul>
+<ul class="tabs">
+<li><a href="http://www.nytimes.com">home page</a></li>
+<li><a href="http://my.nytimes.com">my times</a></li>
+<li><a href="http://www.nytimes.com/pages/todayspaper/index.html">today's paper</a></li>
+<li><a href="http://www.nytimes.com/video">video</a></li>
+<li><a href="http://www.nytimes.com/mostpopular">most popular</a></li>
+<li><a href="http://www.nytimes.com/timestopics">times topics</a></li>
+</ul>
+</div>
+<div id="page">
+<div id="masthead">
+<form id="searchform" name="searchform" method="get" action="http://query.nytimes.com/gst/sitesearch_selector.html" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="date_select" value="full"><div id="nytsearchwidget">
+<label for="searchquery">search all nytimes.com</label><input id="searchquery" type="text" name="query"><input id="searchsubmit" title="search" alt="search" type="image" src="http://graphics8.nytimes.com/images/global/buttons/go.gif"><input type="hidden" value="nyt" name="type" id="searchall">
+</div>
+</form>
+<a href="http://www.nytimes.com"><img id="nytlogo" alt="new york times" title="new york times" src="http://graphics8.nytimes.com/images/misc/nytlogo153x23.gif"></a><div id="date"><script language="javascript" type="text/javascript" src="http://graphics8.nytimes.com/js/print_todays_date.js"></script></div>
+<h1><a href="http://health.nytimes.com/health/guides/index.html">health guide</a></h1>
+</div>
+<div id="navigation" class=""><ul class="tabs">
+<li id="navworld"><a href="http://www.nytimes.com/pages/world/index.html">world</a></li>
+<li id="navus"><a href="http://www.nytimes.com/pages/national/index.html">u.s.</a></li>
+<li id="navnyregion"><a href="http://www.nytimes.com/pages/nyregion/index.html">n.y. / region</a></li>
+<li id="navbusiness"><a href="http://www.nytimes.com/pages/business/index.html">business</a></li>
+<li id="navtechnology"><a href="http://tech.nytimes.com/pages/technology/index.html">technology</a></li>
+<li id="navscience"><a href="http://www.nytimes.com/pages/science/index.html">science</a></li>
+<li class="selected" id="navhealth">
+<a href="http://www.nytimes.com/pages/health/index.html">health</a><ul>
+<li><a href="http://www.nytimes.com/pages/health/research/index.html">research</a></li>
+<li><a href="http://www.nytimes.com/pages/health/nutrition/index.html">fitness &amp; nutrition</a></li>
+<li><a href="http://www.nytimes.com/pages/health/policy/index.html">money &amp; policy</a></li>
+<li><a href="http://www.nytimes.com/pages/health/views/index.html">views</a></li>
+<li class="selected nochildren"><a href="http://health.nytimes.com/health/guides/index.html">health guide</a></li>
+</ul>
+</li>
+<li id="navsports"><a href="http://www.nytimes.com/pages/sports/index.html">sports</a></li>
+<li id="navopinion"><a href="http://www.nytimes.com/pages/opinion/index.html">opinion</a></li>
+<li id="navarts"><a href="http://www.nytimes.com/pages/arts/index.html">arts</a></li>
+<li id="navstyle"><a href="http://www.nytimes.com/pages/style/index.html">style</a></li>
+<li id="navtravel"><a href="http://travel.nytimes.com">travel</a></li>
+<li id="navjobs"><a href="http://jobmarket.nytimes.com/pages/jobs/index.html">jobs</a></li>
+<li id="navrealestate"><a href="http://www.nytimes.com/pages/realestate/index.html">real estate</a></li>
+<li id="navautos"><a href="http://www.nytimes.com/pages/automobiles/index.html">autos</a></li>
+</ul></div>
+<script type="text/javascript">modifynavigationdisplay();</script><div id="adxleaderboard"><!-- adxinfo classification="blank-but-count-imps" campaign="blank04-topad-healthguidepages"--><img src="http://graphics8.nytimes.com/ads/blank.gif"></div>
+<div id="main" class="onestrip">
+<a name="top"></a><div id="abcolumns">
+<div id="header_search" class="clearfix"><div class="searchcontent">
+<form action="http://health.nytimes.com/gst/health/healthsearch.html" method="get">
+<div class="clearfix"><label for="term">search health<span class="searchnotes"><a href="http://health.nytimes.com/health/guides/index.html">3,000+ topics</a></span></label></div>
+<div class="srchfield">
+<input id="query_all" name="term" type="text" autocomplete="off"><div class="auto_complete" id="query_suggestions"></div>
+<input class="gobutton" title="go" alt="go" src="http://graphics8.nytimes.com/images/global/buttons/go.gif" align="absbottom" type="image">
+</div>
+<!--autocomplete code--><script type="text/javascript">
+if (navigator.useragent.match('opera') == null) {
+var osuggest = new autocompleter.local('query_all', 'query_suggestions', suggestions, {minchars:3,choices:15,partialsearch:true});
+osuggest.servertype = 'production';
+}
+</script>
+</form>
+<form method="post" style="padding:0; border:0; margin:0" enctype="application/x-www-form-urlencoded" action="http://www.nytimes.com/gst/emailus.html" name="healthfeedback">
+<input type="hidden" name="type" value="health"><input type="hidden" name="recipient" value="health"><input type="hidden" name="url" value=""><input type="hidden" name="author" value=""><input type="hidden" name="name" value=""><a href="javascript:document.healthfeedback.submit()" class="feedback">send feedback</a>
+</form>
+</div></div>
+<div id="mainheader" class="clearfix">
+<h2 class="health-header"><a href="http://health.nytimes.com/health/guides/index.html" title="times health guide"></a></h2>
+<span class="subh1">more than 3,000 topics described, illustrated and investigated</span>
+</div>
+<div class="columngroup">
+<div class="banner"><h4>browse all health topics</h4></div>
+<div class="browsegroup">
+<a href="/health/guides/index.html?letter=a" class="indexitem">a</a><a href="/health/guides/index.html?letter=b" class="indexitem selected">b</a><a href="/health/guides/index.html?letter=c" class="indexitem">c</a><a href="/health/guides/index.html?letter=d" class="indexitem">d</a><a href="/health/guides/index.html?letter=e" class="indexitem">e</a><a href="/health/guides/index.html?letter=f" class="indexitem">f</a><a href="/health/guides/index.html?letter=g" class="indexitem">g</a><a href="/health/guides/index.html?letter=h" class="indexitem">h</a><a href="/health/guides/index.html?letter=i" class="indexitem">i</a><a href="/health/guides/index.html?letter=j" class="indexitem">j</a><a href="/health/guides/index.html?letter=k" class="indexitem">k</a><a href="/health/guides/index.html?letter=l" class="indexitem">l</a><a href="/health/guides/index.html?letter=m" class="indexitem">m</a><a href="/health/guides/index.html?letter=n" class="indexitem">n</a><a href="/health/guides/index.html?letter=o" class="indexitem">o</a><a href="/health/guides/index.html?letter=p" class="indexitem">p</a><a href="/health/guides/index.html?letter=q" class="indexitem">q</a><a href="/health/guides/index.html?letter=r" class="indexitem">r</a><a href="/health/guides/index.html?letter=s" class="indexitem">s</a><a href="/health/guides/index.html?letter=t" class="indexitem">t</a><a href="/health/guides/index.html?letter=u" class="indexitem">u</a><a href="/health/guides/index.html?letter=v" class="indexitem">v</a><a href="/health/guides/index.html?letter=w" class="indexitem">w</a><a href="/health/guides/index.html?letter=x" class="indexitem">x</a><a href="/health/guides/index.html?letter=y" class="indexitem">y</a><a href="/health/guides/index.html?letter=z" class="indexitem">z</a><a href="/health/guides/index.html?letter=0" class="indexitem last">0-9</a>
+</div>
+<div class="singlerule"></div>
+<h2></h2>
+<div class="listitems"><ul>
+<li><a href="http://health.nytimes.com/health/guides/test/b-and-t-cell-screen/overview.html">b and t cell screen</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/b-cell-leukemialymphoma-panel/overview.html">b-cell leukemia/lymphoma panel</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/baer-brainstem-auditory-evoked-response/overview.html">baer - brainstem auditory evoked response</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bun/overview.html">bun</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/babinskis-reflex/overview.html">babinski's reflex</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/bacitracin-overdose/overview.html">bacitracin overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/bacitracin-zinc-overdose/overview.html">bacitracin zinc overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/back-pain-low/overview.html">back pain - low</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bacterial-gastroenteritis/overview.html">bacterial gastroenteritis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bakers-cyst/overview.html">baker's cyst</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/baking-powder-overdose/overview.html">baking powder overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/baking-soda-overdose/overview.html">baking soda overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/nutrition/balanced-diet/overview.html">balanced diet</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/balanitis/overview.html">balanitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/barbiturate-intoxication-and-overdose/overview.html">barbiturate intoxication and overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/barium-enema/overview.html">barium enema</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/barretts-esophagus/overview.html">barrett's esophagus</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bartholins-abscess/overview.html">bartholin's abscess</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bartter-syndrome/overview.html">bartter syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/basal-cell-carcinoma/overview.html">basal cell carcinoma</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/basal-cell-nevus-syndrome/overview.html">basal cell nevus syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/basal-ganglia-dysfunction/overview.html">basal ganglia dysfunction</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bassen-kornzweig-syndrome/overview.html">bassen-kornzweig syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bathing-trunk-nevus/overview.html">bathing trunk nevus</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/beckers-muscular-dystrophy/overview.html">becker's muscular dystrophy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/beckwith-wiedemann-syndrome/overview.html">beckwith-wiedemann syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bedwetting/overview.html">bedwetting</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/bee-poison/overview.html">bee poison</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/beeswax/overview.html">beeswax poisoning</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/behavior-unusual-or-strange/overview.html">behavior - unusual or strange</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/belching/overview.html">belching</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bells-palsy/overview.html">bell's palsy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bence-jones-protein-quantitative/overview.html">bence-jones protein - quantitative</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/benign-ear-cyst-or-tumor/overview.html">benign ear cyst or tumor</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/benign-positional-vertigo/overview.html">benign positional vertigo</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/benzene-ingestion/overview.html">benzene ingestion</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/beriberi/overview.html">beriberi</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bernstein-test/overview.html">bernstein test</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/beta-blockers-overdose/overview.html">beta blockers overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/beta-carotene/overview.html">beta-carotene</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bezoar/overview.html">bezoar</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bilateral-hydronephrosis/overview.html">bilateral hydronephrosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bile-culture/overview.html">bile culture</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bile-duct-obstruction/overview.html">bile duct obstruction</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/biliary-atresia/overview.html">biliary atresia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/biliary-stricture/overview.html">biliary stricture</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bilirubin/overview.html">bilirubin</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bilirubin-urine/overview.html">bilirubin - urine</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/binge-eating/overview.html">binge eating</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/biopsy/overview.html">biopsy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/biopsy-biliary-tract/overview.html">biopsy - biliary tract</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/biopsy-polyps/overview.html">biopsy - polyps</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bipolar-disorder/overview.html">bipolar disorder</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/birth-control-pills-overdose/overview.html">birth control pills overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/birth-control-and-family-planning/overview.html">birth control and family planning</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/birth-acquired-herpes/overview.html">birth-acquired herpes</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/birthmarks-pigmented/overview.html">birthmarks - pigmented</a></li></ul><ul><li><a href="http://health.nytimes.com/health/guides/disease/birthmarks-red/overview.html">birthmarks - red</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/black-nightshade-poisoning/overview.html">black nightshade poisoning</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/black-widow-spider/overview.html">black widow spider</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bladder-biopsy/overview.html">bladder biopsy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bladder-cancer/overview.html">bladder cancer</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/bladder-exstrophy-repair/overview.html">bladder exstrophy repair</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bladder-outlet-obstruction/overview.html">bladder outlet obstruction</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bladder-stones/overview.html">bladder stones</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/blastomycosis/overview.html">blastomycosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/injury/bleeding/overview.html">bleeding</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bleeding-disorders/overview.html">bleeding disorders</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bleeding-esophageal-varices/overview.html">bleeding esophageal varices</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/bleeding-gums/overview.html">bleeding gums</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/bleeding-into-the-skin/overview.html">bleeding into the skin</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bleeding-time/overview.html">bleeding time</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/blepharitis/overview.html">blepharitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/blind-loop-syndrome/overview.html">blind loop syndrome</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/blindness/overview.html">blindness</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/blockage-of-leg-arteries/overview.html">blockage of leg arteries</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/blocked-tear-duct/overview.html">blocked tear duct</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/blood-culture/overview.html">blood culture</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/blood-differential/overview.html">blood differential</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/blood-gases/overview.html">blood gases</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/blood-glucose-monitoring/overview.html">blood glucose monitoring</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/blood-pressure/overview.html">blood pressure</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/blood-smear/overview.html">blood smear</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/blood-typing/overview.html">blood typing</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/blood-in-the-semen/overview.html">blood in the semen</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/bloody-or-tarry-stools/overview.html">bloody or tarry stools</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/blounts-disease/overview.html">blount's disease</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/blue-nightshade-poisoning/overview.html">blue nightshade poisoning</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/body-lice/overview.html">body lice</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/bone-fracture-repair/overview.html">bone fracture repair</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/bone-graft/overview.html">bone graft</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bone-lesion-biopsy/overview.html">bone lesion biopsy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bone-marrow-aspiration/overview.html">bone marrow aspiration</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bone-marrow-biopsy/overview.html">bone marrow biopsy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bone-marrow-culture/overview.html">bone marrow culture</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/bone-marrow-transplant/overview.html">bone marrow transplant</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bone-mineral-density-test/overview.html">bone mineral density test</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/bone-pain-or-tenderness/overview.html">bone pain or tenderness</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bone-scan/overview.html">bone scan</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bone-tumors/overview.html">bone tumors</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bone-x-ray/overview.html">bone x-ray</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/borderline-personality-disorder/overview.html">borderline personality disorder</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/botulism/overview.html">botulism</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/bowel-incontinence/overview.html">bowel incontinence</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bowel-transit-time/overview.html">bowel transit time</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bowlegs/overview.html">bowlegs</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/brachial-palsy-in-newborns/overview.html">brachial palsy in newborns</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/brachial-plexopathy/overview.html">brachial plexopathy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/brain-abscess/overview.html">brain abscess</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/brain-herniation/overview.html">brain herniation</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/brain-surgery/overview.html">brain surgery</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/brain-tumor-adults/overview.html">brain tumor - adults</a></li></ul><ul><li><a href="http://health.nytimes.com/health/guides/disease/brain-tumor-children/overview.html">brain tumor - children</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/branchial-cleft-cyst/overview.html">branchial cleft cyst</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/breast-premenstrual-tenderness-and-swelling/overview.html">breast - premenstrual tenderness and swelling</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/breast-biopsy/overview.html">breast biopsy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/breast-cancer/overview.html">breast cancer</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/breast-infection/overview.html">breast infection</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/breast-lump/overview.html">breast lump</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/breast-lump-removal/overview.html">breast lump removal</a></li>
+<li><a href="http://health.nytimes.com/health/guides/specialtopic/breast-lump-self-exam/overview.html">breast lump self exam</a></li>
+<li><a href="http://health.nytimes.com/health/guides/nutrition/breast-milk/overview.html">breast milk</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/breast-milk-jaundice/overview.html">breast milk jaundice</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/breast-pain/overview.html">breast pain</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/breast-ultrasound/overview.html">breast ultrasound</a></li>
+<li><a href="http://health.nytimes.com/health/guides/nutrition/breast-feeding-mothers-self-care/overview.html">breast-feeding mothers - self-care</a></li>
+<li><a href="http://health.nytimes.com/health/guides/nutrition/breastfeeding-tips/overview.html">breastfeeding tips</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/breath-alcohol-test/overview.html">breath alcohol test</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/breath-holding-spell/overview.html">breath holding spell</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/breath-odor/overview.html">breath odor</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/breath-sounds/overview.html">breath sounds</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/breathing-slowed-or-stopped/overview.html">breathing - slowed or stopped</a></li>
+<li><a href="http://health.nytimes.com/health/guides/injury/breathing-difficulties-first-aid/overview.html">breathing difficulties - first aid</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/breathing-difficulty/overview.html">breathing difficulty</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/breathing-difficulty-lying-down/overview.html">breathing difficulty - lying down</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/breathing-sounds-abnormal-stridor/overview.html">breathing sounds - abnormal (stridor)</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/brief-reactive-psychosis/overview.html">brief reactive psychosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/symptoms/broad-nasal-bridge/overview.html">broad nasal bridge</a></li>
+<li><a href="http://health.nytimes.com/health/guides/injury/broken-bone/overview.html">broken bone</a></li>
+<li><a href="http://health.nytimes.com/health/guides/injury/broken-or-knocked-out-tooth/overview.html">broken or knocked out tooth</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/brompheniramine-overdose/overview.html">brompheniramine overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bronchial-adenoma/overview.html">bronchial adenoma</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bronchiectasis/overview.html">bronchiectasis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bronchiolitis/overview.html">bronchiolitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bronchitis/overview.html">bronchitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bronchopulmonary-dysplasia/overview.html">bronchopulmonary dysplasia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bronchoscopic-culture/overview.html">bronchoscopic culture</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bronchoscopy/overview.html">bronchoscopy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/bronchoscopy-with-transbronchial-biopsy/overview.html">bronchoscopy with transbronchial biopsy</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/brown-recluse-spider/overview.html">brown recluse spider</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/brucellosis/overview.html">brucellosis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/injury/bruise/overview.html">bruise</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bruxism/overview.html">bruxism</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/bubble-bath-soaps/overview.html">bubble bath soaps</a></li>
+<li><a href="http://health.nytimes.com/health/guides/test/buccal-smear/overview.html">buccal smear</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/bug-sprays/overview.html">bug sprays</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bulimia/overview.html">bulimia</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bullous-pemphigoid/overview.html">bullous pemphigoid</a></li>
+<li><a href="http://health.nytimes.com/health/guides/surgery/bunion-removal/overview.html">bunion removal</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bunions/overview.html">bunions</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/burkitt-lymphoma/overview.html">burkitt lymphoma</a></li>
+<li><a href="http://health.nytimes.com/health/guides/injury/burns/overview.html">burns</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/bursitis/overview.html">bursitis</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/butazolidin-overdose/overview.html">butazolidin overdose</a></li>
+<li><a href="http://health.nytimes.com/health/guides/poison/button-batteries/overview.html">button batteries</a></li>
+<li><a href="http://health.nytimes.com/health/guides/disease/byssinosis/overview.html">byssinosis</a></li>
+</ul></div>
+</div>
+</div>
+<div class="ccolumn">
+<div class="columngroup firstcolumngroup"><div class="relatedstories well">
+<h3 class="sectionheader"><a href="http://well.blogs.nytimes.com/" title="well">well</a></h3>
+<div class="story">
+<h5 class="first"><a href="http://well.blogs.nytimes.com/2008/10/03/parents-often-unaware-of-cyber-bullying/">parents often unaware of cyber-bullying</a></h5>
+<p class="date">october 3, 2008, <span class="timestamp">9:41 am</span></p>
+</div>
+<div class="story">
+<h5><a href="http://well.blogs.nytimes.com/2008/10/02/bad-news-delivered-badly/">bad news, delivered badly</a></h5>
+<p class="date">october 2, 2008</p>
+</div>
+<div class="story">
+<h5><a href="http://well.blogs.nytimes.com/2008/10/02/dieters-gain-more-weight-during-pregnancy/">dieters gain more weight during pregnancy</a></h5>
+<p class="date">october 2, 2008</p>
+</div>
+<div class="story">
+<h5><a href="http://well.blogs.nytimes.com/2008/10/02/emails-and-lies/">e-mails and lies</a></h5>
+<p class="date">october 2, 2008</p>
+</div>
+<div class="story">
+<h5><a href="http://well.blogs.nytimes.com/2008/10/01/vitamin-c-may-interfere-with-cancer-treatment/">vitamin c may interfere with cancer treatment</a></h5>
+<p class="date">october 1, 2008</p>
+</div>
+<p class="more"><a href="http://well.blogs.nytimes.com/">more blog headlines »</a></p>
+</div></div>
+<div class="columngroup" style="text-align:center">
+<div class="clearfix"><script type="text/javascript" src="http://ad.yieldmanager.com/st?ad_type=ad&ad_size=336x280,300x250&section=394810"></script><div style="font-family: arial; font-size: 10px; color:#004276; float: right; margin-right: 9px;"><a href="http://www.nytimes.whsites.net/mediakit/">advertise on nytimes.com</a></div></div></div>
+<div class="columngroup"><!-- adxinfo classification="feature_squares" campaign="regilite-p1-play2008-wk3"--><iframe title="regilite" src="http://www.nytimes.com/gst/litesub_insert.html?product=pl&size=336x90" width="336" height="90" marginheight="0" marginwidth="0" frameborder="0" vspace="0" hspace="0" scrolling="no"></iframe> </div>
+<div class="columngroup"><div class="clearfix" id="health_fit_tools">
+<h3 class="promo">health &amp; fitness tools</h3>
+<a href="http://www.nytimes.com/ref/health/bmi.html"><img src="http://graphics8.nytimes.com/images/2007/04/30/health/health_tool.gif" alt="" class="callout" border="0" height="75" hspace="0" vspace="0" width="75"></a><h5><a href="http://www.nytimes.com/ref/health/bmi.html">bmi calculator</a></h5>
+<a href="http://www.nytimes.com/ref/health/bmi.html" class="more">what's your score? »</a><h5><a href="http://www.nytimes.com/ref/health/caloriecounter.html">calorie calculator for goal weight</a></h5>
+<a href="http://www.nytimes.com/ref/health/caloriecounter.html" class="more">what's your limit? »</a><div id="frame5a"><!-- health promo -->
+<div style="border:solid #333; border-width:10px 1px; font-family:arial,sans-serif; text-align:left; width:334px; background:#fff;position: relative;"><div style="float:left; text-align:left; width: 120px;"><a target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=frame5a&sn2=69d396b9/bae9d006&sn1=a8405b69/869d1565&camp=health-marketingmodule-frame5a&ad=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol&goto=http://health.nytimes.com/health/guides/nutrition/cholesterol/overview.html%3fwt.mc_id=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol%26wt.mc_ev=click%26mkt=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol"><img src="http://graphics8.nytimes.com/ads/marketing/mm08/image-cholesterol.gif" width="120" height="123" border="0"></a></div><div style="float:right; width:214px;"><h2 style="margin:0;padding:11px 5px 1px 10px;font-size:22px;"><a style="color:#660000;" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=frame5a&sn2=69d396b9/bae9d006&sn1=a8405b69/869d1565&camp=health-marketingmodule-frame5a&ad=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol&goto=http://health.nytimes.com/health/guides/nutrition/cholesterol/overview.html%3fwt.mc_id=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol%26wt.mc_ev=click%26mkt=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol">tips to lower<br />your cholesterol.</a></h2>     <h3 style="margin:0;padding: 0 0 15px 11px;font-size:11px;"><a style="color:#333333;" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=frame5a&sn2=69d396b9/bae9d006&sn1=a8405b69/869d1565&camp=health-marketingmodule-frame5a&ad=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol&goto=http://health.nytimes.com/health/guides/nutrition/cholesterol/overview.html%3fwt.mc_id=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol%26wt.mc_ev=click%26mkt=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol">learn more &raquo;</a></h3><a style="color:#333333;" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=frame5a&sn2=69d396b9/bae9d006&sn1=a8405b69/869d1565&camp=health-marketingmodule-frame5a&ad=hl-d-i-nyt-mod-fp-cm1-hl-0308-chol&goto=http://www.nytimes.com/pages/health/index.html%3fwt.mc_id=hl-d-i-nyt-mod-fp-cm1-hl-0308-l1%26wt.mc_ev=click%26mkt=hl-d-i-nyt-mod-fp-cm1-hl-0308-l1"><img src="http://graphics8.nytimes.com/ads/marketing/mm08/health-url.gif" alt="nytimes.com/health" width="166" height="17" longdesc="http://www.nytimes.com/pages/health/index.html" border="0" style="margin-left: 9px;" /></a></div><div style="clear: both;"></div></div>
+<!-- /health promo --></div>
+</div></div>
+<div id="mostpopwidget" class="columngroup">
+<h4>most popular - health</h4>
+<div id="tabscontainer"><ul class="tabs">
+<li class="selected"><a href="#">e-mailed</a></li>
+<li><a href="#">blogged</a></li>
+</ul></div>
+<!-- close tabscontainer --><div class="tabcontent tabcontentactive" id="mostemailed">
+<ol>
+<li><a href="http://www.nytimes.com/2008/10/04/health/policy/04drug.html?em" title="click to go to this article">top psychiatrist failed to report drug income</a></li>
+<li><a href="http://www.nytimes.com/2008/10/02/health/nutrition/02recipehealth.html?em" title="click to go to this article">recipes for health:&nbsp;tuna risotto</a></li>
+<li><a href="http://www.nytimes.com/2008/10/02/health/nutrition/02best.html?em" title="click to go to this article">personal best:&nbsp;before hustling to finish, relaxed is a good way to start</a></li>
+<li><a href="http://www.nytimes.com/2008/10/01/health/01psych.html?em" title="click to go to this article">psychoanalytic therapy wins backing</a></li>
+<li><a href="http://well.blogs.nytimes.com/2008/10/03/parents-often-unaware-of-cyber-bullying/?em" title="click to go to this article">well: parents often unaware of cyber-bullying</a></li>
+<li><a href="http://consults.blogs.nytimes.com/2008/10/03/whats-the-healthiest-diet-of-all/?em" title="click to go to this article">consults: what&#8217;s the healthiest diet of all?</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30online.html?em" title="click to go to this article">logging on for a second (or third) opinion</a></li>
+<li><a href="http://well.blogs.nytimes.com/2008/10/01/vitamin-c-may-interfere-with-cancer-treatment/?em" title="click to go to this article">well: vitamin c may interfere with cancer treatment</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30stud.html?em" title="click to go to this article">searching for clarity: a primer on medical studies</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/views/30chen.html?em" title="click to go to this article">doctor and patient:&nbsp;the dance before the diagnosis</a></li>
+</ol>
+<a class="more" href="http://www.nytimes.com/gst/mostemailed.html">go to complete list »</a>
+</div>
+<!-- close tabcontent mostemailed --><div class="tabcontent" id="mostblogged">
+<ol>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30online.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">logging on for a second (or third) opinion</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30stud.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">searching for clarity: a primer on studies</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30pati.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">you're sick. now what? knowledge is power.</a></li>
+<li><a href="http://www.nytimes.com/2008/10/01/health/01psych.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">psychoanalytic therapy wins backing</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/views/30essa.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">healthy right up to the day you're not</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/research/30tria.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">applying science to alternative medicine</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30find.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">you can find dr. right, with some effort</a></li>
+<li><a href="http://www.nytimes.com/2008/09/30/health/30brod.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">crisis of care on the front line of health</a></li>
+<li><a href="http://www.nytimes.com/imagepages/2008/09/30/health/30study.graphic.ready.html?bl&amp;ex=1223179200&amp;en=9a2bc36dfc35487b&amp;ei=5087%0a" title="click to go to this article">how to read a medical study (skeptically)</a></li>
+</ol>
+<a class="more" href="http://www.nytimes.com/gst/mostblogged.html">go to complete list »</a>
+</div>
+<!-- close tabcontent mostblogged --><script type="text/javascript">new accordian("mostpopwidget");</script>
+</div>
+<div class="columngroup"><!-- adxinfo classification="feature_position" campaign="nyt2008-marketingmodule_v2"-->
+<!-- marketing module -->
+<div style="border:solid #333;border-width:10px 1px;font-family:arial,sans-serif;text-align:left; width:334px;background:#fff">
+
+<div style="padding:9px 14px;background:#fff"> <a style="float:left" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://nytimes.com/%3fwt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-logo%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-logo" target="_new"><img src="http://graphics8.nytimes.com/ads/marketing/mm07/nyt-logo.png" alt="the new york times" width="151" height="26" border="0"></a>
+<a style="float:right" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://movies.nytimes.com/pages/movies/index.html%3fwt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-vrt%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-vrt" target="_new"><img src="http://graphics8.nytimes.com/ads/marketing/mm07/vertical_movies.gif" alt="movies" width="145" height="23" border="0"></a>
+<p style="font-family:arial,sans-serif; clear:both; text-align:right; font-weight:bold; font-size:11px; margin:0;padding:0;">
+<a href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://movies.nytimes.com/pages/movies/index.html%3fwt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-url%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-url" target="_new">nytimes.com/movies</a>
+</p>
+</div>
+
+<a href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://www.nytimes.com/2008/09/28/movies/28newman.html%3fex=1238299200%26en=deecdfa71c1b8cda%26ei=5087%26wt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-ph%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-ph" target="_new"><img src="http://graphics8.nytimes.com/ads/marketing/mm08/movies_100308.jpg" width="334" height="105" border="0"></a>
+<div style="padding:9px 14px;background:#fff">
+<h2 style="font-size:18px;margin:0"><a style="color:#484944;" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://www.nytimes.com/2008/09/28/movies/28newman.html%3fex=1238299200%26en=deecdfa71c1b8cda%26ei=5087%26wt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-hdr%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-hdr ">the life of paul newman</a></h2>
+<p style="font-size:11px;margin:3px 0;padding:0;font-family:arial,sans-serif;">also in movies:</p>
+<ul style="font-size:11px;margin:0" class="refer">
+<li style="font-size:11px"><a style="text-decoration:underline" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://www.nytimes.com/2008/09/28/movies/28paul.html%3fex=1238299200%26en=b2bafedddfd87036%26ei=5087%26wt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-l1%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-l1 ">an actor whose baby blues came in shades of gray</a></li>
+<li style="font-size:11px"><a style="text-decoration:underline" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://www.nytimes.com/interactive/2008/09/27/movies/20080927_newman_audioss/index.html%3fex=1238299200%26en=43339f111d0ca839%26ei=5087%26wt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-l2%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-l2 ">a late, great movie star</a></li>
+<li style="font-size:11px"><a style="text-decoration:underline" target="_new" href="http://www.nytimes.com/adx/bin/adx_click.html?type=goto&page=health.nytimes.com/guides&pos=box1&sn2=73809be2/4c39f9ed&sn1=fab8dfb2/ec12f501&camp=nyt2008-marketingmodule_v2&ad=mo-d-i-nyt-mod-mod-m063-ros-1008&goto=http://www.nytimes.com/2008/09/28/movies/28hotchner.html%3fex=1238299200%26en=e3257fb0d4781023%26ei=5087%26wt.mc_id=mo-d-i-nyt-mod-mod-m063-ros-1008-l3%26wt.mc_ev=click%26mkt=mo-d-i-nyt-mod-mod-m063-ros-1008-l3 ">newman remembered as a good neighbor and a good friend</a></li>
+</ul>
+</div>
+
+</div>
+<!-- /marketing module --></div>
+<div class="columngroup clearfix" id="aroundweb">
+<h3>health around the web</h3>
+<script src="http://service.blogrunner.com/fetch/?u=http://www.blogrunner.com/snapshot/topics/3/8/46a0f9b60c30b638/inbox.xml&amp;o=nyt,js&amp;f=nyt_health&amp;n=3"></script><a href="http://www.blogrunner.com/snapshot/topics/2/0/42eb90d608e1420b/" target="_blank" class="byline ads">powered by blogrunner</a>
+</div>
+</div>
+<br clear="all">
+</div>
+<div class="hidecontent">
+<script language="javascript">
+var user_type = "0";
+var s_prop20 = "";
+var s_account = "nytimesglobal,nythealth";
+var dcsvid = "";
+var regstatus = "non-registered";
+var s_pagename = "/health/guides/index.html";
+var s_channel = "health";
+var s_prop1 = "health index";
+tacoda_ams_ddc_addpair( "t_section","health" );
+</script>
+
+<script src="http://graphics8.nytimes.com/js/app/analytics/trackingtags_v1.1.js" type="text/javascript"></script><noscript><div><img alt="dcsimg" id="dcsimg" width="1" height="1" src="http://wt.o.nytimes.com/dcsym57yw10000s1s8g0boozt_9t1x/njs.gif?dcsuri=/nojavascript&amp;wt.js=no&amp;wt.tv=1.0.7"/></div></noscript>
+
+
+
+<!-- start upt call --><img height="1" width="3" border="0" src="http://up.nytimes.com/?d=0/18/&amp;t=&amp;s=0&amp;ui=&amp;r=&amp;u=health.nytimes.com%2funprotected%2fhealth%2fhealthguide.php"><!-- end upt call -->
+<img src="/adx/bin/clientside/3d8e446q2fmph06mcq608q60q7epm2q7epq7eooh_o,8,," height="1" width="3"></div>
+<div id="footer">
+<div class="footerrow">
+<a href="http://www.nytimes.com">home</a><ul>
+<li><a href="http://www.nytimes.com/pages/world/index.html">world</a></li>
+<li><a href="http://www.nytimes.com/pages/national/index.html">u.s.</a></li>
+<li><a href="http://www.nytimes.com/pages/nyregion/index.html">n.y. / region</a></li>
+<li><a href="http://www.nytimes.com/pages/business/index.html">business</a></li>
+<li><a href="http://tech.nytimes.com/pages/technology/index.html">technology</a></li>
+<li><a href="http://www.nytimes.com/pages/science/index.html">science</a></li>
+<li><a href="http://www.nytimes.com/pages/health/index.html">health</a></li>
+<li><a href="http://www.nytimes.com/pages/sports/index.html">sports</a></li>
+<li><a href="http://www.nytimes.com/pages/opinion/index.html">opinion</a></li>
+<li><a href="http://www.nytimes.com/pages/arts/index.html">arts</a></li>
+<li><a href="http://www.nytimes.com/pages/style/index.html">style</a></li>
+<li><a href="http://travel.nytimes.com">travel</a></li>
+<li><a href="http://jobmarket.nytimes.com/pages/jobs/index.html">jobs</a></li>
+<li><a href="http://www.nytimes.com/pages/realestate/index.html">real estate</a></li>
+<li><a href="http://www.nytimes.com/pages/automobiles/index.html">autos</a></li>
+<li><a href="#top">back to top</a></li>
+</ul>
+</div>
+<a href="http://www.nytimes.com/ref/membercenter/help/copyright.html">copyright  2008</a> <a href="http://www.nytco.com/">the new york times company</a><ul>
+<li><a href="http://www.nytimes.com/privacy">privacy policy</a></li>
+<li><a href="http://www.nytimes.com/search">search</a></li>
+<li><a href="http://www.nytimes.com/corrections.html">corrections</a></li>
+<li><a href="http://www.nytimes.com/rss" class="rssbutton">rss</a></li>
+<li><a href="http://firstlook.nytimes.com">first look</a></li>
+<li><a href="http://www.nytimes.com/membercenter/sitehelp.html">help</a></li>
+<li><a href="http://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">contact us</a></li>
+<li><a href="http://www.nytco.com/career.html">work for us</a></li>
+<li><a href="http://www.nytimes.whsites.net/mediakit/">media kit</a></li>
+<li><a href="http://spiderbites.nytimes.com/">site map</a></li>
+</ul>
+</div>
+</div>
+</div></body>
+</html>
+

@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Thooth .: WISE Playground</title>
+
+<link rel="stylesheet" href="../css/structure.css"/>
+<link rel="stylesheet" href="../css/style.css"/>
+<link rel="stylesheet" href="wise.css"/>
+
+<script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../js/prototype.js" type="text/javascript"></script>
+
+<script type="text/javascript">var lang = "en";</script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../JSON/servertouse.js"></script>
+<script type="text/javascript" src="../JSON/serverCall.js"></script>
+<script type="text/javascript" src="../JSON/login.js"></script>
+<script type="text/javascript" src="wise.js"></script>
+
+<script type="text/javascript">
+var Q;
+function runtest() {
+
+	if(WISE.trim($("query").value) == "") {
+		alert("please enter a query")
+		return;
+	}
+	$("appoutput").innerHTML = "";
+	Q = {"q":$("query").value};
+	WISE.apps = {};
+	var temp_obj = {};
+	var obj_text = $("appdef").value;
+		var first_brace = obj_text.indexOf("{");
+		var last_brace = obj_text.indexOf("}");
+		try {
+			if (first_brace > -1 && last_brace > -1) {
+				if(first_brace >0) obj_text = obj_text.substring(first_brace, obj_text.length);
+				last_brace = obj_text.lastIndexOf("}");
+				if (last_brace != obj_text.length-1) obj_text = obj_text.substring(0, last_brace+1);
+				
+				//alert(obj_text);
+				temp_obj = eval( "(" + obj_text +")" );
+				WISE.apps[temp_obj.id] = temp_obj;
+				WISE.apps[temp_obj.id].inlineCode = $("appcode").value
+				WISE.apps[temp_obj.id].isPlayGround = true;
+				if($("WISE_" + temp_obj.id)) {
+					document.getElementsByTagName("head")[0].removeChild($("WISE_" + temp_obj.id));
+				}
+				//alert(temp_obj.id);
+			}
+			else {
+				alert("not a valid object");
+			}
+		} catch (ex) {alert (ex.message);}
+		
+	WISE.scan(Q.q);
+
+}
+</script>
+</head>
+<body onload="WISE.load_css();" style="text-align:left; ">
+<script type="text/javascript" src="../js/header.js"></script>
+<div id="container">
+	<div id="page-container">
+		<h1>WISE Playground</h1>
+		<div class="wise-message">
+			You can create an app in realtime on our servers and test it. Once you have it working the way you want, you can submit it to us and after we review it, we will make it live on Wikia Search. When you have it working the way you want it, for now you can just send the two parts to us by email at <a href="mailto:wiseguys@wikia.com">wiseguys@wikia.com</a>. Pretty soon we'll have a nicer submission process! 
+		</div>
+		<div id="wise-container">
+			<h2>Query</h2>
+			<input type="text" id="query" />
+			<div class="wise-note">Note that you will not be able to test triggering on suggested terms from the playground.</div>
+			<h2>Application Definition Object</h2>
+			<div class="wise-instruction">
+				The application definition object is a snippet of javascript code (a javascript object, to be more specific) which makes the parent WISE object aware of your application's existence and of the specific parameters that it will need to run properly (e.g. how it is triggered, what file the javascript code is in, what function to call when the app is being run), and also makes the world aware of what the app does, and who the WISEguy is that created it . . . <a target="_blank" href="http://search.wikia.com/wiki/Creating_a_WISE_Application#The_Application_Definition_Object">more help</a>
+			</div>
+			<textarea id='appdef' rows=1 onfocus='WISE.pgShow("def");'></textarea>
+			<h2>Application Javascript Code</h2>
+			<div class="wise-instruction">
+				At a minumum, your javascript file will need 2 functions. One function that will be initially called by WISE to run the application (as defined in the "action" parameter of the app definition object) which will make the call out to the api to retrieve the data to be displayed by the application, and another to take the data retrieved, construct the output for the application, and build the result that will get added to the result set (this second function will be passed to the api you call as the json callback parameter) . . . <a target="_blank" href="http://search.wikia.com/wiki/Creating_a_WISE_Application#The_Application_Javascript_File">more help</a>
+			</div>
+			<textarea id='appcode' rows=1 onfocus='WISE.pgShow("code");'></textarea>
+			<input type="button" id="test-application" value="Test Your Application" onclick="runtest();"/> 
+			<h2>Application Preview</h2>
+			<div class="wise-instruction">
+				Here's a preview of your application.
+			</div>
+			<div id='appoutput'></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

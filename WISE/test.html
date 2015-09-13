@@ -1,0 +1,1192 @@
+<html>
+<head>
+<title>WISE test</title>
+
+<link rel="stylesheet" href="../css/structure.css"/>
+<link rel="stylesheet" href="../css/style.css"/>
+
+<script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../js/prototype.js" type="text/javascript"></script>
+
+<script type="text/javascript">var lang = "en";</script>
+
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../JSON/servertouse.js"></script>
+<script type="text/javascript" src="wise.js"></script>
+
+<script type="text/javascript">
+function loadFields(which, autoload) {
+	
+	while(fieldCount) removeField();
+	
+	fieldCount=0;
+	clearOutput();
+	g_obj = {};
+	
+	jQuery("#testlist").html("View Examples: ");
+	for(var daName in test_API.list) {
+		var funccall = "javascript:loadFields('" + daName + "', " + ((daName != "brandnew") ? "1" : "0") + ");"
+		jQuery("#testlist").append('<a href="' + funccall + '">' + test_API.list[daName].response.display_name + '</a> | ');
+	}
+	jQuery("#testlist").html($("testlist").innerHTML.substring(0, $("testlist").innerHTML.length-3));
+	
+	if(which=="brandnew2") {
+		goToStep(3);
+		return;
+	}
+	if(test_API.list[which]) {	
+		var t_o = test_API.list[which];
+	}
+	else if(which=="loaded")  {
+		var t_o = WISE.apps.test_obj.gen_obj;
+		jQuery("#wise_obj_id").val( WISE.apps.test_obj.id ? WISE.apps.test_obj.id : "" );
+		jQuery("#wise_obj_author").val( WISE.apps.test_obj.author ? WISE.apps.test_obj.author : "" );
+		jQuery("#wise_obj_regex").val( WISE.apps.test_obj.regex ? WISE.apps.test_obj.regex : "" );
+		jQuery("#wise_obj_name").val( WISE.apps.test_obj.name ? WISE.apps.test_obj.name : "" );
+		jQuery("#wise_obj_description").val( WISE.apps.test_obj.description ? WISE.apps.test_obj.description : "" );
+		jQuery("#wise_obj_logo").val( WISE.apps.test_obj.logo ? WISE.apps.test_obj.logo : "" );
+		jQuery("#wise_app_title").val( WISE.apps.test_obj.apptitle ? WISE.apps.test_obj.apptitle : "" );
+		jQuery("#wise_app_url").val( WISE.apps.test_obj.appurl ? WISE.apps.test_obj.appurl : "" );
+	}
+	
+	var url = t_o.request.url ? t_o.request.url : "";
+	if (t_o.request.params) {
+		url += "?";
+		for (param in t_o.request.params) {
+			url += param + "=" + t_o.request.params[param] + "&";
+		}
+		url = url.substr(0, url.length-1);
+	}
+	
+		jQuery("#wise_url").val(url);
+		jQuery("#wise_search").val((t_o.request.search) ? t_o.request.search : "");
+		jQuery("#wise_q_append").val( (t_o.request.q_append) ? t_o.request.q_append : "" );
+		jQuery("#wise_size").val( t_o.response.size ? t_o.response.size : "" );
+		jQuery("#wise_q").val( "" );
+		
+		jQuery("#wise_root").val( t_o.response.rootelement ? t_o.response.rootelement : "" );
+		jQuery("#wise_cont").val( t_o.response.containerElement ? t_o.response.containerElement : "" );
+		$("wise_titlefield").value = t_o.response.titleField ? t_o.response.titleField : "";
+		$("wise_itemstyle").value = (t_o.response.styles && t_o.response.styles.item_style) ? t_o.response.styles.item_style : "";
+		$("wise_lastitemstyle").value = (t_o.response.styles && t_o.response.styles.last_item_style) ? t_o.response.styles.last_item_style : "";
+		$("wise_imagestyle").value = (t_o.response.styles && t_o.response.styles.image_style) ? t_o.response.styles.image_style : "";
+		$("wise_urlstyle").value = (t_o.response.styles && t_o.response.styles.url_style) ? t_o.response.styles.url_style : "";
+		
+		if(t_o.response.url) {
+			if(t_o.response.url.field) {
+				$("wise_urlbase").value = "";
+				$("wise_urlparams").value = "";
+				
+				$("wise_urltype").value = "field"
+				$("wise_urlfield").value = t_o.response.url.field;
+			}
+			else {
+				$("wise_urlfield").value = "";
+				
+				$("wise_urltype").value = "build"
+				$("wise_urlbase").value = t_o.response.url.base;
+				$("wise_urlparams").value = t_o.response.url.params.join(',');
+			}
+		}
+		else {
+			$("wise_urlbase").value = "";
+			$("wise_urlparams").value = "";
+			
+			$("wise_urltype").value = "field"
+			$("wise_urlfield").value = "";
+		}
+		switchUrlType();
+		
+		//---------------
+		if (t_o.response.image) {
+			if(t_o.response.image.field) {
+				$("wise_imagebase").value = "";
+				$("wise_imageparams").value = "";
+				
+				$("wise_imagetype").value = "field"
+				$("wise_imagefield").value = t_o.response.image.field;
+			}
+			else {
+				$("wise_imagefield").value = "";
+				
+				$("wise_imagetype").value = "build"
+				$("wise_imagebase").value = t_o.response.image.base;
+				$("wise_imageparams").value = t_o.response.image.params.join(',');
+			}
+		}
+		else {
+			$("wise_imagetype").value = "field"
+			$("wise_imagebase").value = "";
+			$("wise_imageparams").value = "";
+			$("wise_imagefield").value = "";
+		}
+		switchImageType();
+		//---------------
+		
+		jQuery("#wise_redeclare").val( (t_o.redeclare) ? t_o.redeclare : "" ); 
+		
+		if(t_o.response.contentFields) {
+			for (var i=0; i<=t_o.response.contentFields.length; i++) {
+			
+				createField();
+			
+				if(i<t_o.response.contentFields.length) {
+					$("wise_prefix_" + (i+1)).value = t_o.response.contentFields[i].prefix;
+					$("wise_field_" + (i+1)).value = t_o.response.contentFields[i].field;
+					$("wise_suffix_" + (i+1)).value = t_o.response.contentFields[i].suffix;
+					if(t_o.response.contentFields[i].limit) $("wise_limit_" + (i+1)).value = t_o.response.contentFields[i].limit;
+					if(t_o.response.contentFields[i].type) $("wise_type_" + (i+1)).value = t_o.response.contentFields[i].type;
+				}
+			}
+		}
+
+	if(autoload) getAndDo();		
+	goToStep(1);
+	doFieldCheck();
+	if($("wise_url").value == "") $("wise_url").focus();
+}
+
+function createField() {
+
+	var field_div = document.createElement('div');
+	field_div.setAttribute("id", "field_"+(fieldCount+1));
+	field_div.innerHTML = 'prefix: <input type="text" id="wise_prefix_' + (fieldCount+1) + '" size="45" onfocus="showHelpPopup(this.id, \'freeform\', \'wise_prefix_' + (fieldCount+1) + '\', true);" onblur="clearHelpPopup(this.id);" onchange="justDo();" />field: <input type="text" id="wise_field_' + (fieldCount+1) + '" size="20" onfocus="suggest(\'field\', \'wise_field_' + (fieldCount+1) + '\', true);" onblur="clearSuggest();" onchange="justDo();" />suffix: <input type="text" id="wise_suffix_' + (fieldCount+1) + '" size="45" onfocus="suggest(\'freeform\', \'wise_suffix_' + (fieldCount+1) + '\', true);" onblur="clearSuggest();" onchange="justDo();" /> limit:<input type="text" id="wise_limit_' + (fieldCount+1) + '" size="3" onchange="justDo();" /> type:<input type="text" id="wise_type_' + (fieldCount+1) + '" size="10" onchange="justDo();" /><br/>';
+	$("contentFields").appendChild(field_div);
+	fieldCount++;
+
+}
+
+function removeField(reload) {
+	if(fieldCount) {
+		$("contentFields").removeChild($("field_"+fieldCount));
+		fieldCount--;
+	}
+	if(reload) justDo();
+}
+
+function load_app() {
+
+	if($("wise_loadapp").value != "") {
+		var obj_text = $("wise_loadapp").value;
+		var first_brace = obj_text.indexOf("{");
+		var last_brace = obj_text.indexOf("}");
+		try {
+			if (first_brace > -1 && last_brace > -1) {
+				if(first_brace >0) obj_text = obj_text.substring(first_brace, obj_text.length);
+				last_brace = obj_text.lastIndexOf("}");
+				if (last_brace != obj_text.length-1) obj_text = obj_text.substring(0, last_brace);
+				
+				//alert(obj_text);
+				WISE.apps.test_obj = {};
+				WISE.apps.test_obj = eval( "(" + obj_text +")" );
+				loadFields("loaded", true);
+				$("wise_q").focus();
+				
+			}
+			else {
+				alert("not a valid object");
+			}
+		} catch (ex) {alert (ex.message);}
+	}
+}
+
+function setVals() {
+	 
+	WISE.apps.test_obj = {};
+	WISE.apps.test_obj.id = "";
+	WISE.apps.test_obj.name = "";
+	WISE.apps.test_obj.author = "";
+	WISE.apps.test_obj.description = "";
+	WISE.apps.test_obj.logo = "";
+	WISE.apps.test_obj.categories = "";
+	WISE.apps.test_obj.regex = "";
+	WISE.apps.test_obj.apptitle = "";
+	WISE.apps.test_obj.appurl = "";
+	WISE.apps.test_obj.gen_obj = {};
+	WISE.apps.test_obj.gen_obj.request = {};
+	WISE.apps.test_obj.gen_obj.response = {};
+	WISE.apps.test_obj.gen_obj.response.styles = {};
+
+	WISE.apps.test_obj.gen_obj.request.url = $("wise_url").value;
+
+	if($("wise_search").value != "") 
+            WISE.apps.test_obj.gen_obj.request.search = $("wise_search").value;
+
+	if($("wise_q_append").value != "") 
+            WISE.apps.test_obj.gen_obj.request.q_append= $("wise_q_append").value;
+
+	WISE.apps.test_obj.gen_obj.response.size = $("wise_size").value;
+	
+	if($("wise_root").value != "") WISE.apps.test_obj.gen_obj.response.rootelement = $("wise_root").value;
+
+	WISE.apps.test_obj.gen_obj.response.containerElement = $("wise_cont").value;
+	WISE.apps.test_obj.gen_obj.response.titleField = $("wise_titlefield").value;
+	WISE.apps.test_obj.gen_obj.response.styles.item_style = $("wise_itemstyle").value;
+	WISE.apps.test_obj.gen_obj.response.styles.last_item_style = $("wise_lastitemstyle").value;
+	WISE.apps.test_obj.gen_obj.response.styles.image_style = $("wise_imagestyle").value;
+	WISE.apps.test_obj.gen_obj.response.styles.url_style = $("wise_urlstyle").value;
+	
+	WISE.apps.test_obj.id = $("wise_obj_id").value;
+	WISE.apps.test_obj.name = $("wise_obj_name").value;
+	WISE.apps.test_obj.author = $("wise_obj_author").value;
+	WISE.apps.test_obj.regex = $("wise_obj_regex").value;
+	WISE.apps.test_obj.description = $("wise_obj_description").value;
+	WISE.apps.test_obj.logo = $("wise_obj_logo").value;
+	
+	WISE.apps.test_obj.apptitle = $("wise_app_title").value;
+	WISE.apps.test_obj.appurl = $("wise_app_url").value;
+	
+	WISE.apps.test_obj.gen_obj.response.url = {};
+
+	if ($("wise_urltype").value == "field") WISE.apps.test_obj.gen_obj.response.url.field = $("wise_urlfield").value;
+	else {
+		WISE.apps.test_obj.gen_obj.response.url.base = $("wise_urlbase").value;
+		WISE.apps.test_obj.gen_obj.response.url.params = $("wise_urlparams").value.split(",");
+	}
+	//------------
+	if ($("wise_imagetype").value == "field") {
+		if ($("wise_imagefield").value != "") {
+			WISE.apps.test_obj.gen_obj.response.image = {};
+			WISE.apps.test_obj.gen_obj.response.image.field = $("wise_imagefield").value;
+		}
+	}
+	else {
+		if ($("wise_imagebase").value != "") {
+			WISE.apps.test_obj.gen_obj.response.image = {};
+			WISE.apps.test_obj.gen_obj.response.image.base = $("wise_imagebase").value;
+			WISE.apps.test_obj.gen_obj.response.image.params = $("wise_imageparams").value.split(",");
+		}
+	}
+	//------------
+	
+	if($("wise_redeclare").value != "") WISE.apps.test_obj.gen_obj.redeclare = $("wise_redeclare").value;
+	
+	WISE.apps.test_obj.gen_obj.response.contentFields = new Array();
+	
+	var i=0;
+	var count=0;
+	while($("wise_prefix_" + (i+1))) {
+		if($("wise_field_" + (i+1)).value != "") {
+			WISE.apps.test_obj.gen_obj.response.contentFields.push({});
+			WISE.apps.test_obj.gen_obj.response.contentFields[count].prefix = $("wise_prefix_" + (i+1)).value;
+			WISE.apps.test_obj.gen_obj.response.contentFields[count].field = $("wise_field_" + (i+1)).value;
+			WISE.apps.test_obj.gen_obj.response.contentFields[count].suffix = $("wise_suffix_" + (i+1)).value;
+			WISE.apps.test_obj.gen_obj.response.contentFields[count].limit = $("wise_limit_" + (i+1)).value;
+			WISE.apps.test_obj.gen_obj.response.contentFields[count].type = $("wise_type_" + (i+1)).value;
+			count++;
+		}
+		i++;
+	}
+}
+
+function set_wise_attr(which) {
+
+	WISE.apps.test_obj[which] = jQuery("#wise_obj_"+which).val();
+	showVals();
+
+}
+
+function testQ() {
+
+	if (WISE.apps.test_obj.regex && WISE.apps.test_obj.regex != "") {
+
+		if(WISE.apps.test_obj.regex.indexOf("/") == 0) {
+			var regexpstr = WISE.apps.test_obj.regex.substring(1, WISE.apps.test_obj.regex.length);
+			regexpstr = regexpstr.substring(0, regexpstr.lastIndexOf("/"))
+			regexparams = WISE.apps.test_obj.regex.substring(WISE.apps.test_obj.regex.lastIndexOf("/")+1);
+			var test_reg = new RegExp(regexpstr, regexparams);
+		}
+		else var test_reg = new RegExp(WISE.apps.test_obj.regex, "i");
+		
+		var matches = test_reg.exec($("wise_obj_testregex").value);
+		if (matches) {
+			var match_string = "";
+			for (var i=1; i<matches.length; i++) {
+				if (typeof matches[i]=="undefined") continue;
+				match_string += "Match: " + matches[i];
+				break;
+			}
+			alert(match_string);
+		}
+		else {
+			alert("no matches");
+		}
+	}
+	else alert("no regex entered");
+}
+
+function showVals() {
+	
+        if(WISE.apps.test_obj.id && WISE.apps.test_obj.id != "") {
+            jQuery("#wiseobjoutput_obj").html("WISE.apps." + WISE.apps.test_obj.id + "=");
+
+            if(WISE.apps.test_obj.regex && WISE.apps.test_obj.regex != "") {}
+            else {
+                jQuery("#wise_obj_regex").val("/(?:(.*)?\s(?:"+WISE.apps.test_obj.id+")|(?:"+WISE.apps.test_obj.id+")\s?(.*))/i");
+                WISE.apps.test_obj.regex = jQuery("#wise_obj_regex").val();
+            }
+	}
+        else 
+            jQuery("#wiseobjoutput_obj").html("");
+
+        $("wiseobjoutput_obj").innerHTML += Object.toJSON(WISE.apps.test_obj).escapeHTML();
+	
+        if(WISE.apps.test_obj.regex && WISE.apps.test_obj.regex != "") 
+            $("wiseobjoutput_obj").innerHTML = $("wiseobjoutput_obj").innerHTML.replace('"regex": "'+WISE.apps.test_obj.regex + '",', '"regex": ' + WISE.apps.test_obj.regex+',');
+
+        if(WISE.apps.test_obj.categories && WISE.apps.test_obj.categories != "") 
+            $("wiseobjoutput_obj").innerHTML = $("wiseobjoutput_obj").innerHTML.replace('"categories": "'+WISE.apps.test_obj.categories + '",', '"categories": ' + WISE.apps.test_obj.categories+',');
+
+        $("wiseobjoutput_obj").innerHTML += "};";
+	
+}
+
+function clearOutput() {
+
+	jQuery("#output").html("");
+	jQuery("#jsonoutput").html("");
+	jQuery("#wiseobjoutput_obj").html("");
+	
+	jQuery("#wise_obj_id").val("");
+	jQuery("#wise_obj_name").val("");
+	jQuery("#wise_obj_author").val("");
+	jQuery("#wise_obj_regex").val("");
+	jQuery("#wise_obj_testregex").val("");
+	jQuery("#wise_obj_description").val("");
+	jQuery("#wise_obj_logo").val("");
+	jQuery("#wise_obj_categories").val("");
+}
+
+function getAndDo() {
+
+	setVals();
+	if($("wise_url").value != "")
+            WISE.generic.load($("wise_q").value, "test_obj");
+	showVals();
+	showOutput('');
+
+}
+
+function justDo() {
+
+	setVals();
+	WISE.generic.processApiResult(g_obj);
+	showVals();
+	showOutput('');
+
+}
+
+function alertAndGo(obj) {
+	g_obj = obj;
+	$("jsonoutput").innerHTML = Object.toJSON(obj);
+	WISE.generic.processApiResult(obj);
+}
+
+function switchUrlType() {
+	if ($("wise_urltype").value == "field") {
+		$("wise_url_build_div").hide();
+		$("wise_url_field_div").show();
+	}
+	else {
+		$("wise_url_field_div").hide();
+		$("wise_url_build_div").show();
+	}
+}
+
+function switchImageType() {
+	if ($("wise_imagetype").value == "field") {
+		$("wise_image_build_div").hide();
+		$("wise_image_field_div").show();
+	}
+	else {
+		$("wise_image_field_div").hide();
+		$("wise_image_build_div").show();
+	}
+}
+
+function showOutput(which, scrollblock) {
+	if(!which) which = "";
+	$("output").hide();
+	$("jsonoutput").hide();
+	$("wiseobjoutput").hide();
+	$(which + "output").show();
+	setLinkColors(which);
+	if (scrollblock) $("outputdiv").scrollTo();
+}
+function setLinkColors(which) {
+	$("outputlink").style.color='blue';
+	$("outputlink").style.textDecoration='underline';
+	$("jsonoutputlink").style.color='blue';
+	$("jsonoutputlink").style.textDecoration='underline';
+	$("wiseobjoutputlink").style.color='blue';
+	$("wiseobjoutputlink").style.textDecoration='underline';
+	$(which + "outputlink").style.color='black';
+	$(which + "outputlink").style.textDecoration='none';
+}
+
+function goToStep(step) {
+
+	switch(step) {
+		case 1:
+			$("responsediv").hide();
+			$("loaddiv").hide();
+			$("requestdiv").show();
+			break;
+		case 2:
+			$("requestdiv").hide();
+			$("loaddiv").hide();
+			$("responsediv").show();
+			showOutput('');
+			break;
+		case 3:
+			$("requestdiv").hide();
+			$("responsediv").hide();
+			$("loaddiv").show();
+			showOutput('');
+			break;
+		default:
+			$("responsediv").hide();
+			$("loaddiv").hide();
+			$("requestdiv").show();
+	}
+
+}
+
+function setSuggestion(field, which, append) {
+	if (append=="param") {
+		 if($(field).value!= "") $(field).value += ","+which;
+		 else $(field).value = which;
+	}
+	else if (append=="freeform") $(field).value += which;
+	else $(field).value = which;
+	justDo();
+	clearTimeout(clearSuggestTimer);
+	clearSuggest();
+	doFieldCheck(field);
+}
+
+function suggest(type, field, showVals) {
+	
+	clearTimeout(clearSuggestTimer);
+	$("suggesttext").innerHTML = "";
+	var append = "none";
+	var check_obj = true;
+	switch(type) {
+		case "root":
+			which = "";
+			break;
+		case "container":
+			which = (($("wise_root").value != "") ? $("wise_root").value : "");
+			break;
+		case "param":
+			append = "param";
+		case "field":
+			which = (($("wise_root").value != "") ? $("wise_root").value + "." : "") + (($("wise_cont").value != "") ? $("wise_cont").value : "");
+			break;
+		case "freeform":
+			append="freeform"
+			$("suggesttext").innerHTML += '<a href="javascript:setSuggestion(\'' + field + '\', \'<br/>\', \'' + append + '\');">' + new String("<br/>").escapeHTML() + '</a>: Line Break<br/>'
+			check_obj = false;
+			break;
+			
+	}
+
+	if(check_obj) {
+		var temp_sug_obj = g_obj;
+
+		do_suggest(field, showVals, type, append, which, 0);
+	}
+	$("suggestion").style.left=$(field).cumulativeOffset()[0] + "px";
+	$("suggestion").style.top=($(field).cumulativeOffset()[1] + 25) + "px";
+	$("suggestion").show();
+}
+
+function do_suggest(field, showVals, type, append, which, obj) {
+	var temp_sug_obj = g_obj;
+	var sug_text = "";
+	var rec_text = "Recommended Option(s):<br/>";
+	var has_rec = false;
+	var rec_list = {};
+	$("suggesttext").innerHTML = "";	
+	if(which != "") {
+		var fields = which.split(".");
+		for (var i=0; i<fields.length; i++) {
+			if (!temp_sug_obj) {
+				$("suggesttext").innerHTML = "Error: does not exist";
+				exit = true;
+				break;
+			}
+			temp_sug_obj = temp_sug_obj[fields[i]];
+		}
+	}
+	sug_text += 'All Possible Values:';
+	if(temp_sug_obj.length) {
+		sug_text += "<br/>View fields with data from a different result: ";
+		var disp_size = ((temp_sug_obj.length>10) ? 10 : temp_sug_obj.length);
+		for (var i=0; i<disp_size; i++) {
+			sug_text += '<a style="color:blue; cursor:pointer;" onclick="do_suggest(\'' + field + '\', ' + showVals + ', \'' + type + '\', \'' + append + '\', \'' + which + '\', '+i+');">'+i+'</a> ';
+		}
+		temp_sug_obj = temp_sug_obj[obj];
+	}
+	sug_text += '<br/>';
+	for (var aname in temp_sug_obj) {
+		//sug_text += '<a href="javascript:setSuggestion(\'' + field + '\', \'' + aname + '\', \'' + append + '\');">' + aname + '</a>' + (showVals ? ": " + temp_sug_obj[aname] : "") + '<br/>'
+		sug_text += '<a href="javascript:setSuggestion(\'' + field + '\', \'' + aname + '\', \'' + append + '\');">' + aname + '</a>';
+		//if (showVals) {
+			if(typeof temp_sug_obj[aname] == 'object') {
+				if(temp_sug_obj[aname]) {
+					if(temp_sug_obj[aname].length) {
+					/*
+						sug_text += "<div style='padding-left:15px;'>"
+						for (var i=0; i<temp_sug_obj[aname].length; i++) {
+							sug_text += '<a href="javascript:setSuggestion(\'' + field + '\', \'' + aname + '[' + i + ']\', \'' + append + '\');">' + sub_name + '</a>' + (showVals ? ": " + temp_sug_obj[aname][i] : "") + '<br/>'
+						}
+						sug_text += "</div>";
+					*/
+					}
+					else {
+						sug_text += "<div style='padding-left:15px;'>"
+						for (var sub_name in temp_sug_obj[aname]) {
+							sug_text += '<a href="javascript:setSuggestion(\'' + field + '\', \'' + aname + '.' + sub_name + '\', \'' + append + '\');">' + sub_name + '</a>' + (showVals ? ": " + temp_sug_obj[aname][sub_name] : "") + '<br/>'
+						}
+						sug_text += "</div>";
+					}
+				}
+			}
+			else sug_text += temp_sug_obj[aname] + "<br/>";
+		/*
+		}
+		else {
+			sug_text += '<br/>';
+		}
+		*/
+		if (type=="root") {
+			for (var bname in temp_sug_obj[aname]) {
+				if (temp_sug_obj[aname][bname] && (typeof temp_sug_obj[aname][bname] != "string") && temp_sug_obj[aname][bname][0]) {
+					if(!rec_list[aname]) {
+						rec_text += '<a href="javascript:setSuggestion(\'' + field + '\', \'' + aname + '\', \'' + append + '\');">' + aname + '</a>' + (showVals ? ": " + temp_sug_obj[aname] : "") + '<br/>'
+						rec_list[aname] = rec_text;
+						has_rec = true;
+					}
+				}
+			}
+		}
+		if (type=="container") {
+			if ((typeof temp_sug_obj[aname] != "string") && temp_sug_obj[aname][0]) {
+				if(!rec_list[aname]) {
+					rec_text += '<a href="javascript:setSuggestion(\'' + field + '\', \'' + aname + '\', \'' + append + '\');">' + aname + '</a>' + (showVals ? ": " + temp_sug_obj[aname] : "") + '<br/>'
+					rec_list[aname] = rec_text;
+					has_rec = true;
+				}
+			}
+		}
+	}
+	
+	if(type=="container" && !has_rec) {
+		for (var aname in temp_sug_obj) {
+			if (typeof temp_sug_obj[aname] == "object" && !temp_sug_obj[aname].length) {
+				for (var sub_name in temp_sug_obj[aname]) {
+					if (typeof temp_sug_obj[aname][sub_name] == "object" && temp_sug_obj[aname][sub_name].length) {
+						rec_text += '<a href="javascript:setSuggestion(\'' + field + '\', \'' + aname + '.' + sub_name + '\', \'' + append + '\');">' + aname + '.' + sub_name + '</a>' + (showVals ? ": " + temp_sug_obj[aname][sub_name] : "") + '<br/>'
+						has_rec = true;
+					}
+				}
+			}
+		}
+	}
+	if(type=="root" && !has_rec) {
+		for (var aname in temp_sug_obj) {
+			if (typeof temp_sug_obj[aname] == "object" && !temp_sug_obj[aname].length) {
+				for (var bname in temp_sug_obj[aname]) {
+					if (temp_sug_obj[aname][bname] && typeof temp_sug_obj[aname][bname] == "object" && !temp_sug_obj[aname][bname].length) {
+						for (var sub_name in temp_sug_obj[aname][bname]) {
+							if (temp_sug_obj[aname][bname][sub_name] && typeof temp_sug_obj[aname][bname][sub_name] == "object" && temp_sug_obj[aname][bname][sub_name].length) {
+								rec_text += '<a href="javascript:setSuggestion(\'' + field + '\', \'' + aname + "." + bname + '\', \'' + append + '\');">' + aname + "." + bname + '</a>' + (showVals ? ": " + temp_sug_obj[aname][bname] : "") + '<br/>'
+								has_rec = true;
+							}
+						}
+					}
+				}
+			}
+		}
+		if (!has_rec) rec_text += "Leave this Blank";
+	}
+	
+	$("suggesttext").innerHTML = (has_rec ? rec_text : "") + sug_text;
+	setTimeout(function() {clearTimeout(clearSuggestTimer);}, 200)
+	
+}
+
+function clearSuggest() {
+	
+	clearSuggestTimer = setTimeout(function() {doClearSuggest();}, 500)
+}
+
+function doClearSuggest() {
+	jQuery("#suggesttext").html("");
+	jQuery("#suggestion").hide();
+}
+
+var clearSuggestTimer;
+var clearHelpTimer;
+
+var enterToTab = false;
+var enterOrTab = false;
+
+function enterToTabFunc(e) {
+	if (!e) e = window.event;
+	if (e.keyCode==13 && enterToTab) { 
+		enterOrTab = true; 
+		clearHelpPopup(enterToTab) 
+	}
+}
+
+function encode_html_wisely() {
+
+	$('wise_url').value = WISE.server + '/index.php?action=ajax&rs=wfGetHTMLtoJSON&rsargs[]=' + encodeURIComponent($('wise_html_encoder').value) + '&rsargs[]=' + encodeURIComponent($('wise_html_results').value) + '&rsargs[]=WISE.generic.processApiResult';
+	$('wise_search').value = "$1						";
+	doFieldCheck("wise_url");
+
+}
+
+function showHtmlEncoder() {
+	$("wise_htmlencoder_span").show();
+	doFieldCheck("wise_html_encoder");
+}
+
+function encode_wisely() {
+	$('wise_url').value = WISE.server + '/index.php?action=ajax&rs=wfGetGenericXMLtoJSON&rsargs[]=' + encodeURIComponent($('wise_encoder').value) + "&rsargs[]=WISE.generic.processApiResult";
+	$('wise_search').value = "rsargs[]";
+	doFieldCheck("wise_url");
+}
+
+function showEncoder() {
+	$("wise_encoder_span").show();
+	doFieldCheck("wise_encoder");
+}
+
+function showHelpPopup(which, has_suggest_type, has_suggest_el, has_suggest_append) {
+	clearTimeout(clearHelpTimer);
+	clearTimeout(clearSuggestTimer);
+	if(!has_suggest_type) {
+		clearTimeout(clearSuggestTimer);
+		doClearSuggest();
+	}
+	else {
+		suggest(has_suggest_type, has_suggest_el, has_suggest_append);
+	}
+	enterToTab = which;
+	$(which).onkeyup = enterToTabFunc;
+	
+	var helpText = "";
+	$("helptext").innerHTML = helpText;
+	switch(which) {
+		case "wise_url":
+			helpText = "To get things started, in this field, enter the url for the api that you are trying to call.  Make sure to include all necessary parameters that will remain static across all calls made by the application, such as number of results to return, time period over which to search, etc.  Do not, however include the parameter for the query, as that (if necessary) will be provided in the next step.  If the query is part of the base of the url, and does not appear in the API as a parameter after the ? in the url, then use '$1' as a placeholder for where the query will go. Since this generator will consume data from RESTful JSON API's, make sure to include a parameter for a callback function and use 'WISE.generic.processApiResult' as the function.<br/><br/>For example:<br/>http://ajax.googleapis.com/ajax/services/search/web?v=1.0&callback=WISE.generic.processApiResult <br/><br />This field works with RESTful JSON api interfaces.  If the API you are trying to use will only return XML, <a href='javascript:showEncoder();' style='cursor:pointer;'>click here</a><br /><br />For HTML search results, <a href='javascript:showHtmlEncoder();' style='cursor:pointer;'>click here</a>";
+			break;
+		case "wise_encoder":
+			helpText = "In this field, enter the url for the XML api that you are trying to call.  Make sure to include all necessary parameters that will remain static across all calls made by the application, such as number of results to return, time period over which to search, etc.  Unlike in the JSON url box above, in this one, you do want to include the parameter for the query at the end of the url as the last parameter with tan '=' but no value set.";
+			break;
+		case "wise_html_encoder":
+			helpText = "Enter the url for the HTML search results page.";
+			break;
+		case "wise_search":
+			helpText = "If the API that you are using for the application lets you search, what is the name of the parameter that is used to pass the query to the API (ex: q, search, query). leave this blank if you dont intend to search the API.  (If in the previous step you used $1 as a placeholder for the query because this particular API uses the query as part of the base URL and not as a parameter, then enter '$1' here also)";
+			break;	
+		case "wise_q":
+			helpText = "what do you want to search for (this is for testing purposes only... in the real app this will be replaced by the keyword from the search)";
+			break;	
+		case "wise_q_append":
+			helpText = "if there is something that you want to append to every query, such as limiting the site that results come from in a search result, etc... put that here";
+			break;	
+		case "wise_redeclare":
+			helpText = "Most of the time, this will be left blank.  however, some APIs will not allow certain characters in the callback function parameter, like dots.  since we need to have dots in our callback (probably WISE.processAPIResult or something) we may need to set something up to redeclare the function to a different name.  an example here is like in the digg example above.  in this box, set the value that is being passed to the API equal to what it really should be, such as: process_digg=WISE.ProcessAPIResult;";
+			break;		
+		case "wise_size":
+			helpText = "If you want to display less then the number of results returned by the api call, set it here... (most apps will use 3 or 4). this param will do nothing if it is larger than the number of results returned.  Ideally you will be able to specify the number of results returned by the api to what you want in the api call with a parameter that sets the number of results to return, but some apis only let you set a general size (like google) and you want to display a specific # (if you enter -1 here your app will display all results returned)";
+			break;
+		case "wise_root":
+			helpText = "Some APIs have all of their data contained within one root element of the results object. if the output from this API does so (click on get data from api and then click on the JSON output link below to check) provide the name of that element so that the tool can properly find the results data.  as en example, view the json output for the google api and note that all of the data is contained inside the 'responseData' root element<br/>";
+			break;
+		case "wise_cont":
+			helpText = "underneath the root element, there should be an element (usually an array) that contains the individual result items to be enumerated over for display.  provide that elements name here.";
+			break;
+		case "wise_app_title":
+			helpText = "This is the title that will appear in the link for the overall application in the search results.  Enter a meaningful title here, as this is what people will see when your application is returned in a user's result set.  If you want the query term to appear in the title, use '$1' as a placeholder when specifying your title here.";
+			break;
+		case "wise_app_url":
+			helpText = "This is the url that will be used as the link that will appear as the link for the overall application in the search results.  Ideally, you would want this link to take the user to a page that would be a more complete set of results for what your application is displaying a slice of.  For example the search results page for the same term that triggered your application.  Just like with the title, if you want to insert the term into the url you are using here, use '$1' as a placeholder.";
+			break;
+		case "wise_titlefield":
+			helpText = "Each item that your application will display presumably has a url and a title, which are stored in fields in the result set served up by the API.  In this field, specify the name of the field from the result set that you want to use for each item to display as the text in the link to the item.  You can enter it freeform, or choose from the list of suggestions that we provide below.";
+			break;
+		case "wise_urltype":
+			helpText = "There are two ways to determine what the url is for the link for each item.  Some apis simply provide them in a field that you can use, others require that you assemble the url based on other fields in the api.  if there is a field you can use, great, choose field in the dropdown.  if you need to construct it, no problem, choose build in the dropdown";
+			break;
+		case "wise_urlfield":
+			helpText = "specify the name of the field that you want to use as the url for the link";
+			break;
+		case "wise_urlbase":
+			helpText = "blah blah blah";
+			break;
+		case "wise_urlparams":
+			helpText = "list the names of the fields from the result set that you want to use to replace the wildcards in the base field.  separate the names with commas, and order them in the order that you want them to replace the '$x' wildcards in the base (ex. the first one listed will replace $1,the second one will replace $2, etc.)";
+			break;
+		case "wise_imagetype":
+			helpText = "if you want to use an image in the result, there are two ways to determine what the url is for the image for each item.  some apis simply provide them in a field that you can use, others require that you assemble the url based on other fields in the api.  if there is a field you can use, great, choose field in the dropdown.  if you need to construct it, no problem, choose build in the dropdown.  if you dont want to use an image at all, choose field in the dropdown, and leave the field box blank";
+			break;
+		case "wise_imagefield":
+			helpText = "specify the name of the field that you want to use as the url for the link.  leave this blank if you dont want to use an image";
+			break;
+		case "wise_imagebase":
+			helpText = "when building the url from other parameters, you start with a base url, and then specify the parts that should be replaced, and then fields that shouldbe used to replace the,.  in the base field, copy in an example url of a completely built url that looks like what you would want the finished product to look like, and replace the sections that are variable and need to be replaced by fields from the result set with '$1', '$2', '$3' and so on, with each different value that needs to be replaced with a new, incremented number after the dollar sign (see the flickr example above for an example";
+			break;
+		case "wise_imageparams":
+			helpText = "list the names of the fields from the result set that you want to use to replace the wildcards in the base field.  separate the names with commas, and order them in the order that you want them to replace the '$x' wildcards in the base (ex. the first one listed will replace $1,the second one will replace $2, etc.)";
+			break;
+		default:
+			if (which.indexof("wise_field_") ==0) helpText = "in each of these items below, you can specify other fields from the api to return and display in the results for each item.  you also can specify text (plain text of html markup) in the prefix/suffix fields for each item to include other static text, or some formatting around the field display. (may require some basic html knowledge :) ).  Also, if the text from the field is longer than you would like to display, you can specify a limit for the number of characters that you would like to display from the text, by entering it into the limit field.  right now, the only value that works in the 'type' field is 'unixdate'.  if the field that is returned from the api is in unix date format, this will format it to a readable format. (click add to add boxes for another field for display, and remove to remove the last set of boxes (warning, it will also remove the data in the boxes))."; 
+			else helpText = "";
+			break;
+	}
+	$("helptext").innerHTML = helpText;
+	$("suggestion").style.left=$(which).cumulativeOffset()[0] + "px";
+	$("suggestion").style.top=($(which).cumulativeOffset()[1] + 25) + "px";
+	$("suggestion").show();
+	
+}
+
+function clearHelpPopup(which) {
+	
+	clearHelpTimer = setTimeout (function() {enterToTab = false;$("helptext").innerHTML = "";$("suggesttext").innerHTML = "";$("suggestion").hide(); if(enterOrTab){enterOrTab=false;setFocus(which);}}, 200);
+	
+	doFieldCheck(which);
+}
+
+function doFieldCheck(which) {
+
+	if (!which) which == "";
+		
+	if($("wise_url").value == "") {
+		$("wise_search_span").hide();
+		$("wise_reqbuttons_span").hide();
+	}
+	else {
+		$("wise_reqbuttons_span").show();
+		$("wise_search_span").show();
+	}
+	
+	
+	if($("wise_search").value == "") $("wise_q_span").hide();
+	else {
+		$("wise_q_span").show();
+	}
+	
+	if($("wise_size").value == "") $("wise_root_span").hide();
+	else {
+		$("wise_root_span").show();
+	}
+	
+	if($("wise_cont").value == "") $("wise_appinfo_span").hide();
+	else {
+		$("wise_appinfo_span").show();
+	}
+	
+	if($("wise_app_title").value == "" || $("wise_app_url").value == "") $("wise_title_span").hide();
+	else {
+		$("wise_title_span").show();
+	}
+	
+	if($("wise_titlefield").value == "") $("wise_url_span").hide();
+	else {
+		$("wise_url_span").show();
+	}
+	
+	if($("wise_urlfield").value == "" && $("wise_urlbase").value == "") $("wise_items_span").hide();
+	else {
+		$("wise_items_span").show();
+	}
+	
+	if(which != "wise_encoder") $("wise_encoder_span").hide();
+	else $("wise_encoder_span").focus();
+
+	if(which != "wise_html_encoder") $("wise_htmlencoder_span").hide();
+	else $("wise_htmlencoder_span").focus();
+
+}
+
+function setFocus(from) {
+
+	var next_focus = {
+		"wise_url":"wise_search",
+		"wise_search":"wise_q",
+		"wise_q":"btn_get",
+		"wise_size":"wise_root",
+		"wise_root":"wise_cont",
+		"wise_cont":"wise_app_title",
+		"wise_app_title":"wise_app_url",
+		"wise_app_url":"wise_titlefield",
+		"wise_titlefield":"wise_urltype",
+		"wise_urlfield":"wise_itemstyle",
+		"wise_urlbase":"wise_urlparams",
+		"wise_urlparams":"wise_itemstyle",
+		"wise_itemstyle":"wise_urlstyle",
+		"wise_urlstyle":"wise_imagetype",
+		"wise_imagefield":"wise_imagestyle",
+		"wise_imagebase":"wise_imageparams",
+		"wise_imageparams":"wise_imagestyle",
+		
+		};
+	if (next_focus[from]) $(next_focus[from]).focus();
+}
+
+var g_obj = {};
+var fieldCount = 0;
+var isGen = true;
+
+var test_API = {
+	"list":{
+		"google":{
+			"request":{
+				"url":"http://ajax.googleapis.com/ajax/services/search/web",
+				"params":{
+					"v":"1.0",
+					"callback":"WISE.generic.processApiResult"
+				},
+				"search":"q"
+			},
+			"response":{
+				"display_name":"Google",
+				"rootelement":"responseData",
+				"containerElement":"results",
+				"titleField":"titleNoFormatting",
+				"contentFields":[ 
+					{"prefix":"", "field":"content", "suffix":"<br/>", "for_desc":true},
+					{"prefix":"<div class='other'><a class='url'>", "field":"unescapedUrl", "suffix":"</a></div>"}
+				],
+				"url":{"field":"unescapedUrl"},
+				"size":4
+			}
+		},
+		"yahoo":{
+			"request":{
+				"url":"http://search.yahooapis.com/WebSearchService/V1/webSearch",
+				"params":{
+					"appid":"xn0wlSbV34FyhFUpNs.JhRy8VT0OCs4bcIXxEWTfEugKLUyvw71fA7nNbi0GOOUy9ogukb6E",
+					"output":"json",
+					"results":"4",
+					"callback":"WISE.generic.processApiResult"
+				},
+				"search":"query"
+			},
+			"response":{
+				"display_name":"Yahoo!",
+				"rootelement":"ResultSet",
+				"containerElement":"Result",
+				"titleField":"Title",
+				"contentFields":[ 
+					{"prefix":"", "field":"Summary", "suffix":"<br/>", "for_desc":true},
+					{"prefix":"<div class='other'><a class='url'>", "field":"Url", "suffix":"</a></div>"}
+				],
+				"url":{"field":"ClickUrl"},
+				"size":4
+			}
+		},
+		"yahoo_news":{
+			"request":{
+				"url":"http://search.yahooapis.com/NewsSearchService/V1/newsSearch",
+				"params":{
+					"appid":"xn0wlSbV34FyhFUpNs.JhRy8VT0OCs4bcIXxEWTfEugKLUyvw71fA7nNbi0GOOUy9ogukb6E",
+					"output":"json",
+					//"type":"phrase",
+					"results":"3",
+					"callback":"WISE.generic.processApiResult"
+				},
+				"search":"query"
+			},
+			"response":{
+				"display_name":"Yahoo! News",
+				"rootelement":"ResultSet",
+				"containerElement":"Result",
+				"titleField":"Title",
+				"contentFields":[ 
+					{"prefix":"", "field":"Summary", "suffix":"<br/>", "for_desc":true, "limit":150},
+					{"prefix":"<div class='other'><a class='url'>", "field":"Url", "suffix":"</a></div>"},
+					{"prefix":"<div style='font-size:10px'>Published: ", "field":"PublishDate", "suffix":"</div>", "type":"unixdate"},
+					{"prefix":"<div style='font-size:10px'>Source: ", "field":"NewsSource", "suffix":"</div>"},
+					//{"prefix":"<div style='font-size:10px'>Modified: ", "field":"ModificationDate", "suffix":"</div>", "type":"unixdate"}
+				],
+				"url":{"field":"ClickUrl"},
+				"size":3
+			}
+		},
+		"yahoo_answers":{
+			"request":{
+				"url":"http://answers.yahooapis.com/AnswersService/V1/questionSearch",
+				"params":{
+					"appid":"xn0wlSbV34FyhFUpNs.JhRy8VT0OCs4bcIXxEWTfEugKLUyvw71fA7nNbi0GOOUy9ogukb6E",
+					"output":"json",
+					"results":"4",
+					"callback":"WISE.generic.processApiResult"
+				},
+				"search":"query"
+			},
+			"response":{
+				"display_name":"Yahoo! Answers",
+				"rootelement":"all",
+				"containerElement":"questions",
+				"titleField":"Subject",
+				"contentFields":[ 
+					{"prefix":"<strong>Question:</strong> ", "field":"Content", "suffix":"<br/>", "limit":100, "for_desc":true},
+					{"prefix":"<strong>Chosen Answer:</strong> ", "field":"ChosenAnswer", "suffix":"", "limit":100, "for_desc":true}
+				],
+				"url":{"field":"Link"},
+				"size":4
+			}
+		},
+		"yahoo_local":{
+			"request":{
+				"url":"http://local.yahooapis.com/LocalSearchService/V3/localSearch",
+				"params":{
+					"appid":"xn0wlSbV34FyhFUpNs.JhRy8VT0OCs4bcIXxEWTfEugKLUyvw71fA7nNbi0GOOUy9ogukb6E",
+					"output":"json",
+					"results":"4",
+					"callback":"WISE.generic.processApiResult",
+					"location":"10018",
+					"category":"all"
+				},
+				"search":"query"
+			},
+			"response":{
+				"display_name":"Yahoo! Local",
+				"rootelement":"ResultSet",
+				"containerElement":"Result",
+				//"image":{"field":"UserPhotoURL"},
+				"titleField":"Title",
+				"contentFields":[ 
+					{"prefix":"", "field":"Address", "suffix":"<br/>", "for_desc":true},
+					{"prefix":"", "field":"City", "suffix":", ", "for_desc":true},
+					{"prefix":"", "field":"State", "suffix":"<br/>", "for_desc":true},
+					{"prefix":"", "field":"Phone", "suffix":"<br/>", "for_desc":true},
+				],
+				"url":{"field":"Url"},
+				"size":4
+			}
+		},
+		"summize":{
+			"request":{
+				"url":"http://summize.com/search.json",
+				"params":{
+					"callback":"WISE.generic.processApiResult",
+					//"page":1,
+					"rpp":4
+				},
+				"search":"q"
+			},
+			"response":{
+				"display_name":"Twitter",
+				"containerElement":"results",
+				"titleField":"from_user",
+				"contentFields":[ 
+					//{"prefix":"@","field":"to_user","suffix":": "},
+					{"prefix":"", "field":"text", "suffix":"<br/>", "for_desc":true}
+				],
+				"url":{"base":"http://twitter.com/$1/statuses/$2","params":["from_user","id"]},
+				"size":4
+			}
+		},
+		"flickr":{
+			"request":{
+				"url":"http://api.flickr.com/services/rest/",
+				"params":{
+					"method":"flickr.photos.search",
+					"api_key":"148e34666b35345834f59d2f8f917bd6",
+					"per_page":"4",
+					"page":"1",
+					"format":"json",
+					"extras":"owner_name",
+					"sort":"interestingness-desc",
+					"license":"1,2,3,4,5,6",
+					"jsoncallback":"WISE.generic.processApiResult"
+				},
+				"search":"tags"
+			},
+			"response":{
+				"display_name":"flickr",
+				"rootelement":"photos",
+				"containerElement":"photo",
+				"image":{"base":"http://farm$1.static.flickr.com/$2/$3_$4_t.jpg","params":["farm","server","id","secret"]},
+				"titleField":"title",
+				"contentFields":[ 
+					{"prefix":"", "field":"title", "suffix":"", "for_desc":true}
+				],
+				"url":{"base":"http://farm$1.static.flickr.com/$2/$3_$4.jpg","params":["farm","server","id","secret"]},
+				"size":4
+			}
+		},
+		"vimeo":{
+			"request":{
+				"url":"http://thooth.com/WISE/ajax/index.php?action=ajax&rs=wfGetVimeoAPIJSON&rsargs[]=4d3550e5e836d361c700522690277409&rsargs[]=json&rsargs[]=WISE.generic.processApiResult&rsargs[]=vimeo.videos.search",
+				"search":"rsargs[]"
+			},
+			"response":{
+				"display_name":"Vimeo",
+				"rootelement":"videos",
+				"containerElement":"video",
+				"titleField":"title",
+				"contentFields":[ 
+					{"prefix":"", "field":"title", "suffix":"", "for_desc":true}
+				],
+				"url":{"base":"http://www.vimeo.com/$1","params":["id"]},
+				"size":4
+			}
+		},
+		//http://api.yelp.com/business_review_search?term=cream%20puffs&location=650%20Mission%20St%2ASan%20Francisco%2A%20CA&ywsid=XXXXXXXXXXXXXXXX
+		"yelp":{
+			"request":{
+				"url":"http://api.yelp.com/business_review_search",
+				"params":{
+					"num_biz_requested":"4",
+					"ywsid":"ebkIEcI-T3TepTZSJSUkgQ",
+					"location":"New York, NY",
+					"type":"javascript",
+					"callback":"WISE.generic.processApiResult"
+				},
+				"search":"term"
+			},
+			"response":{
+				"display_name":"Yelp",
+				"containerElement":"businesses",
+				"titleField":"name",
+				"contentFields":[ 
+					{"prefix":"", "field":"review_count", "suffix":" ratings<br/>"},
+					{"prefix":"", "field":"address1", "suffix":"<br/>", "for_desc":true},
+					{"prefix":"", "field":"address2", "suffix":"<br/>", "for_desc":true},
+					{"prefix":"", "field":"city", "suffix":", ", "for_desc":true},
+					{"prefix":"", "field":"state", "suffix":" ", "for_desc":true},
+					{"prefix":"", "field":"zip", "suffix":"", "for_desc":true}
+				],
+				"image":{"field":"rating_img_url_small"},
+				"url":{"field":"url"}
+			}
+		},
+		"brandnew":{
+			"request":{},
+			"response":{
+				"display_name":"Start Your Own",
+				"contentFields":[]
+			}
+		},
+		"brandnew2":{
+			"request":{},
+			"response":{
+				"display_name":"Load Your Own",
+				"contentFields":[]
+			}
+		}
+	}
+}
+</script>
+</head>
+
+<body onload="javascript:loadFields('brandnew');" style="text-align:left !important;">
+<div id="suggestion" style="display:none; position:absolute; z-index:10; background:#EEEEEE;"><div id="helptext"></div><div id="suggesttext"></div></div>
+<div id="testlist"></div>
+<div id="requestdiv" style="border: 1px solid black; width:90%;">
+	Request:<br/>
+	Url: <input type="text" id="wise_url" size="150" onfocus="showHelpPopup(this.id);" onblur="clearHelpPopup(this.id);" /><br/>
+	<span id="wise_encoder_span">Use this to url encode part (temp): <input type="text" id="wise_encoder" size="100" /> <input type="button" onclick="encode_wisely();" value="Encode" /> <br /></span>
+	<span id="wise_htmlencoder_span">Enter the HTML search URL: <input type="text" id="wise_html_encoder" size="75" /> <br />Enter the results element (example: 'div.search_results'): <input type="text" id="wise_html_results" size="25" /> <input type="button" onclick="encode_html_wisely();" value="Convert HTML" /> <br/></span>
+	<span id="wise_search_span">search param: <input type="text" id="wise_search" size="20" onfocus="showHelpPopup(this.id);" onblur="clearHelpPopup(this.id);" /><br/></span>
+	<span id="wise_q_span">query: <input type="text" id="wise_q" size="20" onfocus="showHelpPopup(this.id);" onblur="clearHelpPopup(this.id);" /> append to query?: <input type="text" id="wise_q_append" size="20" onfocus="showHelpPopup(this.id);" onblur="clearHelpPopup(this.id);" /><br/></span>
+	<span id="wise_redeclare_span" style="display:none;">redeclare: <input type="text" id="wise_redeclare" size="50" onfocus="showHelpPopup(this.id);" onblur="clearHelpPopup(this.id);" /><br/></span>
+	<span id="wise_reqbuttons_span">
+	First: 
+	<input type="button" onclick="getAndDo();" value="Get The Data From API" id="btn_get" />
+	Then if the data that came back from the API looks ok:
+	<input type="button" onclick="goToStep(2);" value="Go To The Next Step" />
+	(if not, modify the url above and click get Data again)
+	</span>
+</div>
+
+<div id="loaddiv" style="border: 1px solid black; width:90%;display:none;">
+	Paste in the Wise App obj:<br/>
+	<textarea cols="100" rows="20" id="wise_loadapp">
+WISE.apps.name={"id": "name", "name": "Name", "author": "", "description": "", "logo": "favicon.ico", "categories": ['Shopping'], "regex": /(?:(.*)?\s(?:name)|(?:name)\s?(.*))/i, "apptitle": "Name .: Search results for '$1'", "appurl": "http://www.payless.com/search?q=$1", "gen_obj": {"request": {"url": "https://phpstack-7093-15665-41540.cloudwaysapps.com/WISE/ajax/index.php?action=ajax&rs=wfGetHTMLtoJSON&rsargs[]=http%3A%2F%2Fwww.payless.com%2Fsearch%3Fq%3D$1&rsargs[]=div.product-tile&rsargs[]=WISE.generic.processApiResult", "search": "$1"}, "response": {"styles": {"item_style": "float:left;width:22%;", "last_item_style": "float:left;width:22%;", "image_style": "", "url_style": ""}, "size": "4", "rootelement": "responseData", "containerElement": "results", "titleField": "other_text.0", "url": {"field": "link"}, "contentFields": [{"prefix": "<a href=\"", "field": "link", "suffix": "\" target=\"_blank\" >", "limit": "", "type": ""}, {"prefix": "<img src=\"", "field": "image", "suffix": "\" style=\"width:120px;\" title=\"", "limit": "", "type": ""}, {"prefix": "", "field": "title", "suffix": "\" border=\"0\" /></a>", "limit": "", "type": ""}]}}, "params": [""]}};
+	</textarea>
+	<br/>
+	<input type="button" value="Load" onclick="load_app();" />
+	<input type="button" value="Cancel" onclick="goToStep(1);" />
+</div>
+
+<div id="responsediv" style="border: 1px solid black; width:90%; display:none;">
+	Response:<br/>
+	number of results to display: <input type="text" id="wise_size" size="20" onchange="justDo();" onfocus="showHelpPopup(this.id);" onblur="clearHelpPopup(this.id);" /><br/>
+	<span id="wise_root_span">
+		rootElement: <input type="text" id="wise_root" size="20" onfocus="showHelpPopup(this.id, 'root', 'wise_root');" onblur="clearHelpPopup(this.id);" onchange="justDo();" /> 
+		containerElement: <input type="text" id="wise_cont" size="20" onfocus="showHelpPopup(this.id, 'container', 'wise_cont');" onblur="clearHelpPopup(this.id);" onchange="justDo();" /><br/>
+	</span>
+	<span id="wise_appinfo_span">
+		app title: <input type="text" id="wise_app_title" onchange="justDo();" onfocus="showHelpPopup(this.id);" onblur="clearHelpPopup(this.id);" /> 
+		app url: <input type="text" id="wise_app_url" onchange="justDo();" onfocus="showHelpPopup(this.id);" onblur="clearHelpPopup(this.id);" /><br/>
+	</span>
+	<span id="wise_title_span">titleField: <input type="text" id="wise_titlefield" size="20" onfocus="showHelpPopup(this.id, 'field', 'wise_titlefield', true);" onblur="clearHelpPopup(this.id);" onchange="justDo();" /><br/></span>
+	<span id="wise_url_span">
+		url: <select onchange="switchUrlType();" id="wise_urltype" onfocus="showHelpPopup(this.id);" onblur="clearHelpPopup(this.id);"><option value="field">field</option><option value="build">build</option></select>
+		<span id="wise_url_field_div">
+			field: <input type="text" id="wise_urlfield" size="20" onfocus="showHelpPopup(this.id, 'field', 'wise_urlfield', true);" onblur="clearHelpPopup(this.id);" onchange="justDo();" /> 
+		</span>
+		<span id="wise_url_build_div" style="display:none;">
+			base: <input type="text" id="wise_urlbase" size="50" onchange="justDo();" onfocus="showHelpPopup(this.id);" onblur="clearHelpPopup(this.id);" />
+			params: <input type="text" id="wise_urlparams" size="50" onfocus="showHelpPopup(this.id, 'param', 'wise_urlparams', true);" onblur="clearHelpPopup(this.id);" onchange="justDo();" /> 
+		</span><br/>
+	</span>
+	<!--    -->
+	<span id="wise_items_span">
+		itemStyle: <input type="text" id="wise_itemstyle" size="20" onchange="justDo();" /> last item style: <input type="text" id="wise_lastitemstyle" size="20" onchange="justDo();" /><br/>
+		linkStyle: <input type="text" id="wise_urlstyle" size="20" onchange="justDo();" /><br/>
+
+		image: <select onchange="switchImageType();" id="wise_imagetype" onfocus="showHelpPopup(this.id);" onblur="clearHelpPopup(this.id);"><option value="field">field</option><option value="build">build</option></select> 
+		<span id="wise_image_field_div">
+			field: <input type="text" id="wise_imagefield" size="20" onfocus="showHelpPopup(this.id, 'field', 'wise_imagefield', true);" onblur="clearHelpPopup(this.id);" onchange="justDo();" /> 
+		</span>
+		<span id="wise_image_build_div" style="display:none;">
+			base: <input type="text" id="wise_imagebase" size="50" onchange="justDo();" />
+			params: <input type="text" id="wise_imageparams" size="50" onfocus="showHelpPopup(this.id, 'param', 'wise_imageparams', true);" onblur="clearHelpPopup(this.id);" onchange="justDo();" /> 
+		</span> 
+		imageStyle: <input type="text" id="wise_imagestyle" size="20" onchange="justDo();" /><br/>
+	
+		<!--    -->
+		Content Fields to display(<a href="javascript:createField();">Add</a> | <a href="javascript:removeField(1);">Remove</a>): <br/>
+		<div id='contentFields'>
+		</div>
+		<input type="button" onclick="showOutput('wiseobj');" value="Prepare to Save" /> 
+	</span>
+	<input type="button" onclick="goToStep(1);" value="Prev Step" />
+	<!--<input type="button" onclick="justDo();" value="Modify Output" />-->
+	
+</div>
+
+<div id="outputdiv">
+	<a id='outputlink' href="javascript:showOutput('');" onfocus="this.blur();">WISE App output</a> | <a id='jsonoutputlink' href="javascript:showOutput('json');" onfocus="this.blur();">API Call JSON output</a> | <a id='wiseobjoutputlink' href="javascript:showOutput('wiseobj');" onfocus="this.blur();">WISE object output</a><br/><br/>
+	<div id="output"></div>
+	<div id="jsonoutput" style='display:none;'></div>
+	<div id="wiseobjoutput" style='display:none;'>
+		id: <input type="text" id="wise_obj_id" size="20" onchange="set_wise_attr('id');" /> 
+		name: <input type="text" id="wise_obj_name" size="20" onchange="set_wise_attr('name');" /> 
+		author: <input type="text" id="wise_obj_author" size="20" onchange="set_wise_attr('author');" />
+		regex: <input type="text" id="wise_obj_regex" size="20" onchange="set_wise_attr('regex');" />
+		test regex: <input type="text" id="wise_obj_testregex" size="20"  /><input type="button" value="test query against regex" onclick="testQ();" /><br/>
+		description: <input type="text" id="wise_obj_description" size="50" onchange="set_wise_attr('description');" />
+		logo: <input type="text" id="wise_obj_logo" size="50" onchange="set_wise_attr('logo');" /><br/>
+		categories: <input type="text" id="wise_obj_categories" size="50" onchange="set_wise_attr('categories');" /><br/>
+		<div id="wiseobjoutput_obj">
+		</div>
+	</div>
+	<br/>
+</div>
+
+
+</body>
+
+</html>

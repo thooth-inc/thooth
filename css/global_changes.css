@@ -1,0 +1,91 @@
+#changes-container {
+	overflow:hidden;
+}
+
+.gc-nav {
+	font-size:10px;
+	margin:0 0 15px 0;
+	white-space:nowrap;
+}
+
+.gc-nav select {
+	font-size:10px;
+}
+
+.gc-row {
+	margin:0 0 5px 0;
+	padding:0 0 5px 0;
+	border-bottom:1px solid #dcdcdc;
+	font-size:13px;
+	position:relative;
+	overflow:hidden;
+	min-height:25px;
+	height: auto !important;
+	height:25px;
+}
+
+.gc-row img {
+	border:1px solid #dcdcdc;
+	background-color:#fff;
+	vertical-align:middle;
+}
+
+.gc-url {
+	color:green;
+	text-transform:lowercase;
+}
+
+.gc-contributor {
+	font-weight:bold;
+}
+
+.gc-user-controls {
+	font-size:9px;
+	font-weight:normal;
+}
+
+.gc-date {
+	color:#888;
+	font-size:10px;
+}
+
+.gc-actions {
+	position:absolute;
+	top:6px;
+	right:0px;
+	font-size:10px;
+}
+
+.gc-actions a {
+	color:red;
+}
+
+.gc-sug {
+	font-weight:bold;
+}
+
+.edit-details {
+	margin:3px 0 0 30px;
+	width:80%;
+	font-size:11px;
+	color:#444;
+}
+
+.edit-title {
+	margin:0 0 5px 0;
+}
+
+.edit-com {
+	margin:0 0 5px 0;
+}
+
+.rating-count img {
+	border:none;
+	padding:0;
+	margin:0 1px 0 0;
+	background-color:transparent;
+}
+
+.loading-container {
+	font-style:italic;
+}
