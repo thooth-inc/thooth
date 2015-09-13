@@ -1,0 +1,20 @@
+<?php
+return array (
+  'Authentication mode' => '',
+  'Created At' => '',
+  'Created by' => '',
+  'Email' => '',
+  'Guid' => '',
+  'Invalid language!' => '',
+  'Language' => '',
+  'New user needs approval' => '',
+  'Tags' => '',
+  'Updated at' => '',
+  'Updated by' => '',
+  'Username can contain only letters, numbers, spaces and special characters (+-._)' => '',
+  'Visibility' => '',
+  'Wall' => '',
+  'Group' => 'Grupo',
+  'ID' => 'ID',
+  'Username' => 'Nome de utilizador',
+);

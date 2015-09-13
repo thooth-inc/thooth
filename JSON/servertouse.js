@@ -1,5 +1,5 @@
 // server that has the server side JSON functions
-var server_to_use = "https://phpstack-7093-15665-41540.cloudwaysapps.com";
+var server_to_use = "https://phpstack-7093-15665-46626.cloudwaysapps.com";
 
 /** @return a guess for the base URL that allows us to load additional files.
 
@@ -54,10 +54,10 @@ var search_server_to_use =
 var image_server_to_use = search_server_to_use;
 
 //profile picture directory
-var profile_pictures_path = "https://phpstack-7093-15665-41540.cloudwaysapps.com/images/photos";
+var profile_pictures_path = "https://https://phpstack-7093-15665-46626.cloudwaysapps.com/images/photos";
 
 var i18n= {};
-document.write( "<script src=\"" + search_server_to_use + "js/i18n/sprintf.js\" type=\"text/javascript\"></script>" );
-document.write( "<script src=\"" + search_server_to_use + "js/i18n/i18n.js?517\" type=\"text/javascript\"></script>" );
+document.write( "<script src=\"" + search_server_to_use + "js-th/i18n/sprintf.js\" type=\"text/javascript\"></script>" );
+document.write( "<script src=\"" + search_server_to_use + "js-th/i18n/i18n.js?517\" type=\"text/javascript\"></script>" );
 
-var wise_server_to_use = "https://phpstack-7093-15665-41540.cloudwaysapps.com/WISE/ajax";
+var wise_server_to_use = "https://https://phpstack-7093-15665-46626.cloudwaysapps.com/WISE/ajax";
