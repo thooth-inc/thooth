@@ -1,0 +1,13 @@
+{
+	"id": "rainloop",
+	"channel": "stable",
+	"name": "RainLoop Webmail",
+	"author": "RainLoop Team",
+	"url": "http://www.rainloop.net/",
+	"license": "RainLoop Software License",
+	"warnings": "1.6.6|1.6.8|1.8.1|1.9.1",
+	"release": "19.10.2015",
+	"version": "1.9.3.365",
+	"file": "http://repository.rainloop.net/v2/webmail/1.9.3/rainloop-1.9.3.365-f6a947c1a9edf971d7e3ba80fb6723b7.zip",
+	"signature": "http://repository.rainloop.net/v2/webmail/1.9.3/rainloop-1.9.3.365-f6a947c1a9edf971d7e3ba80fb6723b7.zip.asc"
+}
