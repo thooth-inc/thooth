@@ -64,6 +64,17 @@
                                 class="stream"><?php echo Yii::t('DirectoryModule.views_directory_layout', 'User profile posts'); ?></div>
                         </div>
                     </a>
+                    <a href="<?php echo Yii::app()->createUrl('//directory/directory/rainloop'); ?>"
+                       class="list-group-item <?php
+                       if ($this->action->id == "rainloop") {
+                           echo "active";
+                       }
+                       ?>">
+                        <div>
+                            <div
+                                class="stream"><?php echo Yii::t('DirectoryModule.views_directory_layout', 'My Messages'); ?></div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
