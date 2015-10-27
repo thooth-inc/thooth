@@ -228,5 +228,36 @@ class DirectoryController extends Controller
 
         $this->render('userPosts', array());
     }
+    
+    public function actionrainloop()
+    {
+
+        /*
+          // Stats
+          $statsCountPosts = Post::model()->count();
+          //$statsCountProfilePosts = Post::model()->count('space_id is null');
+          $statsCountProfilePosts = 0;
+
+          $statsCountComments = Comment::model()->count();
+          $statsCountLikes = Like::model()->count();
+
+          $statsUserTopPosts = User::model()->find('id = (SELECT created_by FROM post GROUP BY created_by ORDER BY count(*) DESC LIMIT 1)');
+          $statsUserTopComments = User::model()->find('id = (SELECT created_by id  FROM comment GROUP BY created_by ORDER BY count(*) DESC LIMIT 1)');
+          $statsUserTopLikes = User::model()->find('id = (SELECT created_by  FROM `like`  GROUP BY created_by ORDER BY count(*) DESC LIMIT 1)');
+
+          $this->render('userPosts', array(
+          'statsCountPosts' => $statsCountPosts,
+          'statsCountProfilePosts' => $statsCountProfilePosts,
+          'statsCountComments' => $statsCountComments,
+          'statsCountLikes' => $statsCountLikes,
+          'statsUserTopPosts' => $statsUserTopPosts,
+          'statsUserTopComments' => $statsUserTopComments,
+          'statsUserTopLikes' => $statsUserTopLikes,
+          ));
+         */
+
+        $this->render('rainloop', array());
+    }
+
 
 }
