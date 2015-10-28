@@ -10,11 +10,16 @@
  * @since 0.5
  */
 $this->pageTitle = Yii::t('UserModule.views_auth_login', '<strong>Please</strong> sign in');
+$baseUrl = Yii::app()->baseUrl; 
+$cs = Yii::app()->getClientScript();
+//$cs->registerCssFile($baseUrl.'/css/bootstrap.min.css');
+//$cs->registerCssFile($baseUrl.'/css/flatelements.css');
+$cs->registerCssFile($baseUrl.'/css/custom.css');
 ?>
 
 
 <div class="container" style="text-align: center;">
-
+<br><br>
     <?php $this->widget('application.widgets.LogoWidget', array('place' => 'login')); ?>
     <br>
 
@@ -128,5 +133,3 @@ $this->pageTitle = Yii::t('UserModule.views_auth_login', '<strong>Please</strong
 <?php } ?>
 
 </script>
-
-
